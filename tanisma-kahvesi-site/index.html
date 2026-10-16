@@ -1,0 +1,1141 @@
+<!DOCTYPE html><html lang="tr" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"><title>Tanışma Kahvemiz ☕✨</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Titan+One&amp;family=Fredoka:wght@600;700;800;900&amp;family=Bowlby+One+SC&amp;family=Righteous&amp;family=Nunito:wght@700;800;900&amp;display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Akrobat';src:url('/fonts/akrobat-thin.otf') format('opentype');font-weight:100;font-style:normal;font-display:swap}
+@font-face{font-family:'Akrobat';src:url('/fonts/akrobat-extralight.otf') format('opentype');font-weight:200;font-style:normal;font-display:swap}
+@font-face{font-family:'Akrobat';src:url('/fonts/akrobat-light.otf') format('opentype');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Akrobat';src:url('/fonts/akrobat-regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Akrobat';src:url('/fonts/akrobat-semibold.otf') format('opentype');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Akrobat';src:url('/fonts/akrobat-bold.otf') format('opentype');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Akrobat';src:url('/fonts/akrobat-extrabold.otf') format('opentype');font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:'Akrobat';src:url('/fonts/akrobat-black.otf') format('opentype');font-weight:900;font-style:normal;font-display:swap}
+:root{
+  /* 5-Color Exact Palette from Spec */
+  --rum-raisin: #441910;
+  --sea-pink: #E098AC;
+  --lemon-icing: #FFF8D5;
+  --beet-red: #68002C;
+  --crystal-blue: #A6C9DD;
+
+  --bg-color: var(--rum-raisin);
+  --card-bg: var(--sea-pink);
+  --card-border: var(--beet-red);
+  --fg-main: var(--lemon-icing);
+  --fg-dark: var(--beet-red);
+  --fg-muted: #FFD4E2;
+  --fg-muted-dark: #500021;
+
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+*{box-sizing:border-box}
+html,body{
+  margin:0;
+  height:100%;
+  font-family:'Akrobat', 'Fredoka', cursive, sans-serif;
+  color:var(--fg-main);
+  background-color: var(--rum-raisin);
+}
+
+body{
+  display:flex;
+  justify-content:center;
+  position:relative;
+  overflow-x:hidden;
+}
+
+/* Groovy Psychedelic Liquid Wavy Background (Rum Raisin #441910 & Crystal Blue #A6C9DD) */
+.psychedelic-bg{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+.psychedelic-bg svg{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  position:absolute;
+  inset:0;
+}
+
+/* Subtle floating sparkles */
+.bg-decor{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:1;
+  overflow:hidden;
+}
+
+/* Twinkle Sparkles */
+.twinkle{
+  position:absolute;
+  animation:twinkleAnim 3.5s infinite ease-in-out;
+  color:var(--lemon-icing);
+  opacity:0.75;
+  font-size:18px;
+}
+.t1{top:12%;right:12%;animation-delay:0.5s;color:var(--crystal-blue);}
+.t2{top:68%;left:8%;animation-delay:1.8s;color:var(--lemon-icing);}
+.t3{bottom:22%;right:10%;animation-delay:2.7s;color:var(--sea-pink);}
+@keyframes twinkleAnim{
+  0%,100%{opacity:0.3;transform:scale(0.8) rotate(0deg);}
+  50%{opacity:1;transform:scale(1.3) rotate(22deg);}
+}
+
+#app{
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:440px;
+  min-height:100%;
+  padding:22px 20px 32px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+/* Chunky Retro Typography */
+h1,h2,h3{
+  font-family:'Akrobat', 'Fredoka', cursive, sans-serif;
+  margin:0;
+  letter-spacing:0.02em;
+  text-transform:uppercase;
+}
+h1{font-size:32px;line-height:1.15;font-weight:900;color:var(--lemon-icing);text-shadow: 0 4px 0 var(--beet-red);}
+h2{font-size:24px;font-weight:800;color:var(--lemon-icing);text-shadow: 0 3px 0 var(--beet-red);}
+p{margin:0;font-weight:700;}
+.mut{color:var(--crystal-blue);font-size:14px;font-weight:700;letter-spacing:0.01em;}
+.chip .mut, .card .mut{color:var(--fg-muted-dark)}
+
+/* TACTILE CUTE BUTTON SYSTEM WITH SATISFYING PRESS EFFECT */
+button{
+  font-family:'Akrobat', 'Fredoka', cursive, sans-serif;
+  font-size:17px;
+  font-weight:800;
+  letter-spacing:0.03em;
+  border-radius:20px;
+  padding:15px 22px;
+  background: var(--beet-red);
+  color: var(--lemon-icing);
+  border: 3px solid var(--rum-raisin);
+  box-shadow: 0 5px 0 var(--rum-raisin), 0 10px 20px rgba(0,0,0,0.35);
+  cursor:pointer;
+  transition: all 0.12s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  user-select:none;
+  -webkit-tap-highlight-color: transparent;
+  outline:none;
+  text-transform: uppercase;
+}
+button:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 var(--rum-raisin), 0 12px 24px rgba(0,0,0,0.4);
+}
+button:active, button.is-pressed{
+  transform: translateY(5px) scale(0.98) !important;
+  box-shadow: 0 0 0 var(--rum-raisin), 0 2px 4px rgba(0,0,0,0.2) !important;
+  filter: brightness(0.95);
+}
+
+/* Button Variants */
+button.btn-green{
+  background: var(--beet-red);
+  color: var(--lemon-icing);
+  border-color: var(--rum-raisin);
+  box-shadow: 0 5px 0 var(--rum-raisin), 0 8px 16px rgba(104,0,44,0.4);
+}
+button.btn-green:hover{
+  box-shadow: 0 7px 0 var(--rum-raisin), 0 12px 22px rgba(104,0,44,0.5);
+}
+button.btn-green:active{
+  box-shadow: 0 0 0 var(--rum-raisin) !important;
+}
+
+button.btn-blue{
+  background: var(--crystal-blue);
+  color: var(--beet-red);
+  border-color: var(--beet-red);
+  box-shadow: 0 5px 0 var(--beet-red), 0 8px 16px rgba(0,0,0,0.25);
+}
+button.btn-blue:hover{
+  box-shadow: 0 7px 0 var(--beet-red), 0 10px 20px rgba(0,0,0,0.3);
+}
+button.btn-blue:active{
+  box-shadow: 0 0 0 var(--beet-red) !important;
+}
+
+button.g{
+  background: var(--lemon-icing);
+  color: var(--beet-red);
+  border: 3px solid var(--beet-red);
+  box-shadow: 0 5px 0 var(--beet-red), 0 6px 12px rgba(0,0,0,0.25);
+}
+button.g:hover{
+  background: #FFFDF0;
+  border-color: var(--rum-raisin);
+  box-shadow: 0 7px 0 var(--rum-raisin), 0 8px 16px rgba(0,0,0,0.3);
+}
+button.g:active{
+  box-shadow: 0 0 0 var(--beet-red) !important;
+}
+
+button.sm{
+  padding:10px 16px;
+  font-size:14px;
+  border-radius:15px;
+  box-shadow: 0 4px 0 var(--beet-red);
+}
+button.sm:hover{
+  box-shadow: 0 5px 0 var(--beet-red);
+}
+button.sm:active{
+  transform: translateY(4px) scale(0.98) !important;
+  box-shadow: 0 0 0 var(--beet-red) !important;
+}
+
+input,textarea{
+  width:100%;
+  padding:15px 18px;
+  border-radius:18px;
+  border:3px solid var(--beet-red);
+  background: var(--sea-pink);
+  color: var(--beet-red);
+  font:inherit;
+  font-family:'Akrobat', 'Fredoka', cursive, sans-serif;
+  font-size:16px;
+  font-weight:800;
+  transition:all 0.2s ease;
+  outline:none;
+}
+input::placeholder,textarea::placeholder{
+  color: var(--fg-muted-dark);
+  opacity: 0.85;
+}
+input:focus,textarea:focus{
+  background: var(--lemon-icing);
+  border-color: var(--rum-raisin);
+  box-shadow: 0 0 0 5px rgba(166, 201, 221, 0.5);
+}
+
+/* Cute Header Bar */
+.bar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+.pill{
+  background:var(--lemon-icing);
+  color:var(--beet-red);
+  border:2.5px solid var(--beet-red);
+  border-radius:99px;
+  padding:7px 18px;
+  font-family:'Akrobat', 'Fredoka', cursive, sans-serif;
+  font-weight:800;
+  font-size:14px;
+  letter-spacing:0.02em;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+/* Progress bar with bouncy soft style */
+.prog-wrapper{
+  background: var(--sea-pink);
+  border-radius: 99px;
+  padding: 4px;
+  border: 3px solid var(--beet-red);
+}
+.prog{
+  height:12px;
+  border-radius:99px;
+  background:transparent;
+  overflow:hidden;
+}
+.prog i{
+  display:block;
+  height:100%;
+  border-radius:99px;
+  background: linear-gradient(90deg, var(--crystal-blue) 0%, var(--lemon-icing) 100%);
+  transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 2px 6px rgba(166,201,221,0.4);
+}
+
+/* Cards & Chips */
+.chip{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  background:var(--sea-pink);
+  border:3px solid var(--beet-red);
+  border-radius:24px;
+  padding:16px 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.28);
+  transition: transform 0.2s ease;
+  color: var(--beet-red);
+}
+.chip.me{
+  border-color: var(--lemon-icing);
+  background: var(--beet-red);
+  color: var(--lemon-icing);
+}
+.chip.me .avatar-badge-rendered{
+  background: var(--sea-pink);
+  border-color: var(--lemon-icing);
+}
+.chip.me b{
+  color: var(--lemon-icing) !important;
+}
+.chip.me .mut{
+  color: var(--crystal-blue) !important;
+}
+
+/* AVATAR STICKER BADGES - 9 ARCHETYPES GRID */
+.avatar-sticker-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 6px 0 10px;
+}
+.sticker-badge-btn{
+  background: none;
+  border: none;
+  padding: 0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  cursor:pointer;
+  transition: transform 0.15s ease;
+  user-select:none;
+  -webkit-tap-highlight-color: transparent;
+}
+.sticker-badge-btn .badge-icon{
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 3px solid transparent;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.45), 0 2px 4px rgba(0,0,0,0.3);
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.sticker-badge-btn .badge-icon img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.sticker-badge-btn:hover{
+  transform: translateY(-3px);
+}
+.sticker-badge-btn:hover .badge-icon{
+  box-shadow: 0 10px 18px rgba(0,0,0,0.5), 0 3px 6px rgba(0,0,0,0.3);
+}
+.sticker-badge-btn:active{
+  transform: translateY(2px) scale(0.97);
+}
+.sticker-badge-btn.on .badge-icon{
+  border-color: var(--lemon-icing);
+  box-shadow: 0 0 0 3px var(--crystal-blue), 0 8px 16px rgba(0,0,0,0.5);
+}
+.sticker-badge-btn .badge-label{
+  font-family:'Akrobat', 'Fredoka', cursive, sans-serif;
+  font-size:13px;
+  font-weight:700;
+  color:var(--lemon-icing);
+  text-align:center;
+  line-height:1.15;
+  padding: 0 2px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.sticker-badge-btn.on .badge-label{
+  color: var(--crystal-blue);
+}
+
+/* In-game avatar display */
+.avatar-badge-rendered{
+  width:48px;
+  height:48px;
+  min-width:48px;
+  border-radius:18px;
+  background: var(--lemon-icing);
+  border: 2.5px solid var(--beet-red);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 3px 0 var(--beet-red);
+}
+.avatar-badge-rendered svg{
+  width:32px;
+  height:32px;
+}
+.avatar-badge-rendered{overflow:hidden}
+.avatar-badge-rendered img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* Pulsating Banner Badge */
+.mystery-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background: var(--crystal-blue);
+  border: 2.5px solid var(--beet-red);
+  color: var(--beet-red);
+  font-family:'Akrobat', 'Fredoka', cursive, sans-serif;
+  font-weight:800;
+  font-size:14px;
+  letter-spacing:0.02em;
+  padding:7px 16px;
+  border-radius:99px;
+  animation: pulseBadge 3s infinite ease-in-out;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+@keyframes pulseBadge{
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.04);}
+}
+
+/* SWIPE STAGE & CARDS */
+.stage{
+  position:relative;
+  height:370px;
+  margin:8px 0;
+  perspective: 1000px;
+}
+.card{
+  position:absolute;
+  inset:0;
+  background:var(--sea-pink);
+  border:3.5px solid var(--beet-red);
+  border-radius:30px;
+  padding:26px 20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  gap:14px;
+  touch-action:pan-y;
+  user-select:none;
+  box-shadow: 0 14px 34px rgba(0,0,0,0.35), 0 5px 0 var(--beet-red);
+  transition:transform .25s ease-out;
+  color: var(--beet-red);
+}
+.card:hover{
+  border-color: var(--rum-raisin);
+}
+.card .category-pill{
+  background: var(--crystal-blue);
+  color: var(--beet-red);
+  border: 2px solid var(--beet-red);
+  padding: 6px 16px;
+  border-radius: 99px;
+  font-family:'Akrobat', 'Fredoka', cursive, sans-serif;
+  font-weight:800;
+  font-size: 13px;
+}
+.card .card-emoji-wrap{
+  width:76px;
+  height:76px;
+  border-radius:24px;
+  background: var(--lemon-icing);
+  border: 3px dashed var(--beet-red);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:40px;
+  animation: floatSmall 4s ease-in-out infinite;
+}
+@keyframes floatSmall{
+  0%,100%{transform:translateY(0) rotate(0deg);}
+  50%{transform:translateY(-5px) rotate(4deg);}
+}
+.card h2{
+  font-size:24px;
+  line-height:1.25;
+  color:var(--beet-red);
+}
+
+.tag{
+  position:absolute;
+  top:18px;
+  font-family:'Akrobat', 'Fredoka', cursive, sans-serif;
+  font-weight:800;
+  font-size:19px;
+  padding:6px 16px;
+  border-radius:14px;
+  border:3px solid;
+  opacity:0;
+  pointer-events:none;
+  transition: opacity 0.1s ease;
+}
+.tag.y{left:18px;color:var(--lemon-icing);border-color:var(--rum-raisin);transform:rotate(-12deg);background:var(--beet-red)}
+.tag.n{right:18px;color:var(--beet-red);border-color:var(--beet-red);transform:rotate(12deg);background:var(--crystal-blue)}
+
+/* Swipe action controls */
+.sw{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  align-items:center;
+  margin-top:4px;
+}
+.sw button{
+  width:84px;
+  height:70px;
+  font-size:30px;
+  padding:0;
+  border-radius:24px;
+}
+.sw button#no{
+  background: var(--crystal-blue);
+  border-color: var(--beet-red);
+  color: var(--beet-red);
+  box-shadow: 0 4px 0 var(--beet-red);
+}
+.sw button#no:active{
+  box-shadow: 0 0 0 var(--beet-red) !important;
+}
+
+/* Question Banner */
+.q{
+  background: var(--sea-pink);
+  border:3.5px solid var(--beet-red);
+  border-radius:26px;
+  padding:24px 20px;
+  font-size:19px;
+  font-weight:800;
+  line-height:1.35;
+  color: var(--beet-red);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3), 0 5px 0 var(--beet-red);
+  position:relative;
+}
+.q::before{
+  content:"☕ Sohbet Sorusu";
+  position:absolute;
+  top:-14px;
+  left:18px;
+  background: var(--beet-red);
+  color: var(--lemon-icing);
+  font-family:'Akrobat', 'Fredoka', cursive, sans-serif;
+  font-size:12px;
+  padding:4px 14px;
+  border-radius:99px;
+  font-weight:700;
+  border: 2px solid var(--lemon-icing);
+}
+
+/* Timer */
+.timer{
+  font-family:'Akrobat', 'Fredoka', cursive, sans-serif;
+  font-size:58px;
+  font-weight:900;
+  text-align:center;
+  font-variant-numeric:tabular-nums;
+  color:var(--lemon-icing);
+  text-shadow: 0 4px 0 var(--beet-red);
+  margin: 6px 0;
+}
+
+/* SOS Button */
+.sos{
+  position:sticky;
+  bottom:12px;
+  background:var(--beet-red);
+  color:var(--lemon-icing);
+  border:3px solid var(--lemon-icing);
+  font-size:17px;
+  padding:16px;
+  border-radius:22px;
+  box-shadow: 0 5px 0 var(--rum-raisin), 0 10px 24px rgba(104,0,44,0.5);
+  margin-top:auto;
+}
+.sos:active{
+  box-shadow: 0 0 0 var(--rum-raisin) !important;
+}
+
+.warn{
+  background: var(--sea-pink);
+  border: 2.5px solid var(--beet-red);
+  border-radius: 20px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--beet-red);
+  font-size: 14px;
+  font-weight:800;
+}
+</style>
+</head>
+<body>
+<!-- Groovy Psychedelic Liquid Wavy Pattern in Rum Raisin (#441910) and Crystal Blue (#A6C9DD) -->
+<div class="psychedelic-bg"><svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 1000 1500" xmlns="http://www.w3.org/2000/svg" class=""><rect fill="#441910" width="1000" height="1500"></rect><g stroke="#9ec4db" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M-100,160 C200,280 420,80 720,220 C940,310 1020,170 1120,200" stroke-width="58" class=""></path><path d="M-100,320 C160,240 400,380 690,290 C880,230 1010,340 1120,310" stroke-width="58"></path><path d="M-100,450 C180,340 440,560 740,430 C930,340 1010,500 1120,470" stroke-width="58" class=""></path><path d="M-100,750 C200,880 430,670 710,810 C920,910 1020,740 1120,780" stroke-width="60" class=""></path><path d="M-100,1050 C170,950 430,1180 730,1040 C930,940 1020,1110 1120,1080" stroke-width="58" class=""></path><path d="M-100,1350 C190,1470 440,1260 720,1400 C920,1490 1010,1340 1120,1380" stroke-width="60" class=""></path></g></svg></div>
+<div id="app"><div style="margin-top:18px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px">
+    <div style="width:70px;height:70px;display:flex;align-items:center;justify-content:center;background:var(--sea-pink);border-radius:24px;border:3px solid var(--beet-red);margin-bottom:4px;box-shadow:0 5px 0 var(--beet-red)">
+      <span style="font-size: 36px;" class="">☕</span>
+    </div>
+    <h1 class="">Tanışma Kahvemiz</h1>
+    <span class="mystery-badge">Meet &amp; Cute</span>
+    <p class="mut" style="margin-top: 4px; color: var(--lemon-icing); text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px;">15 Ekim Perşembe · 19.00 · The Stock Bahçeli<br>TOBB ETÜ Popüler Kültür Topluluğu</p>
+  </div>
+  <div class="chip" style="flex-direction:column;align-items:stretch;gap:8px;border-color:var(--beet-red)">
+  <div style="display:flex;align-items:center;justify-content:space-between">
+    <b style="font-family:'Akrobat', 'Fredoka', cursive, sans-serif;color:var(--beet-red);font-size:16px">☕ Nasıl Oynanır?</b>
+    
+  </div>
+  <span class="mut">1. Karakterini ve adını seç, kartları sağa (isterim) veya sola (pas) kaydır.</span>
+  <span class="mut">2. Sistem seni ortak ilgi alanına sahip gizemli 5-6 kişilik masaya yerleştirir.</span>
+  <span class="mut">3. Host soruyu açınca masada 8 dk boyunca tatlı bir sohbet başlar.</span>
+  <span class="mut">4. 7 tur sürer: her turda masalar değişir, yepyeni insanlarla tanışırsın!</span>
+  <span class="mut">5. Takılırsan kırmızı butonla hostu çağırabilirsin.</span>
+</div>
+  <p class="mut" style="text-align: center; margin-top: 6px; color: var(--lemon-icing); text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px;">Kim olarak katılıyorsun?</p>
+  <button id="pl" class="btn-green" style="font-size: 18px;">🙋 Oyuncuyum (Masalara Katıl)</button>
+  <button class="g" id="ho">🎛️ Host Panelini Aç</button>
+  <p class="mut" style="color: var(--sea-pink); text-align: center;"></p><p class="mut" style="text-align: center; font-size: 12px; margin-top: 10px; color: var(--crystal-blue);">v11 · 9 Özel Arketip &amp; Hızlı Tanışma Modu ✨</p></div>
+<script type="module">
+import{initializeApp}from"https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import{getAuth,onAuthStateChanged,signInAnonymously,signInWithEmailAndPassword,signOut}from"https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import{getFirestore,doc,setDoc,getDocFromServer,updateDoc,onSnapshot,collection,addDoc,writeBatch,runTransaction,serverTimestamp}from"https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const app=initializeApp({apiKey:"AIzaSyCFdLygrgopyeFeUfm18WwX74bYKEjRhiA",authDomain:"meeting-20e79.firebaseapp.com",projectId:"meeting-20e79",storageBucket:"meeting-20e79.firebasestorage.app",messagingSenderId:"218477130876",appId:"1:218477130876:web:a30b56aa72a48845fc85f9"});
+const auth=getAuth(app),db=getFirestore(app),SREF=doc(db,"session","state");
+
+/* 9 ARCHETYPE PHOTO STICKERS */
+const STICKERS = {
+  kitapKurdu: { id: "kitapKurdu", label: "Kitap kurdu", svg: `<img src="/images/stickers/kitapKurdu.jpg" alt="Kitap kurdu" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
+  marvelFani: { id: "marvelFani", label: "Marvel Fanı", svg: `<img src="/images/stickers/marvelFani.jpg" alt="Marvel Fanı" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
+  gamer: { id: "gamer", label: "Gamer", svg: `<img src="/images/stickers/gamer.jpg" alt="Gamer" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
+  muziksever: { id: "muziksever", label: "Müziksever", svg: `<img src="/images/stickers/muziksever.jpg" alt="Müziksever" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
+  sanatsever: { id: "sanatsever", label: "Sanatsever", svg: `<img src="/images/stickers/sanatsever.jpg" alt="Sanatsever" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
+  kafeinBagimlisi: { id: "kafeinBagimlisi", label: "Kafein bağımlısı", svg: `<img src="/images/stickers/kafeinBagimlisi.jpg" alt="Kafein bağımlısı" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
+  nerd: { id: "nerd", label: "Nerd", svg: `<img src="/images/stickers/nerd.jpg" alt="Nerd" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
+  animeci: { id: "animeci", label: "Animeci", svg: `<img src="/images/stickers/animeci.jpg" alt="Animeci" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
+  starWarsFani: { id: "starWarsFani", label: "Star Wars fanı", svg: `<img src="/images/stickers/starWarsFani.jpg" alt="Star Wars fanı" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` }
+};
+
+const STICKER_KEYS = Object.keys(STICKERS);
+
+function getAvatarSvg(key){
+  if(STICKERS[key]) return STICKERS[key].svg;
+  if(key === "coffeeCup") return STICKERS.kafeinBagimlisi.svg;
+  if(key === "bookWorm") return STICKERS.kitapKurdu.svg;
+  if(key === "matchaCat") return STICKERS.animeci.svg;
+  if(key === "musicHeadphones") return STICKERS.muziksever.svg;
+  if(key === "cokbilmis") return STICKERS.starWarsFani.svg;
+  return STICKERS.kafeinBagimlisi.svg;
+}
+
+const U={
+"Yüzüklerin Efendisi":{e:"💍",t:["Yüzüklerin Efendisi 1-2-3","Hobbit 1-2-3","The Rings of Power (Dizi)"],q:["Gandalf mi Aragorn mu: Orta Dünya'nın asıl kahramanı kim?","Bir yüzük sana sınırsız güç verse onu yok etmeye gider miydin?","Hobbit filmleri üç parçaya bölünmeyi hak etti mi?"]},
+"Harry Potter":{e:"⚡",t:["Harry Potter filmleri (1-7)","Harry Potter kitapları (1-7)","Yeni Harry Potter Dizisi"],q:["Film mi kitap mı? Hangisi hikâyeyi daha iyi anlattı?","Hangi eve ait olduğunu düşünüyorsun ve neden?","Yeni dizi gerekli mi, yoksa eski filmler dokunulmaz mı?"]},
+"Star Wars":{e:"🚀",t:["Star Wars 1-2-3 (2000'ler)","Star Wars 4-5-6 (80'ler)","Star Wars 7-8-9 (2010'lar)","Rogue One / Solo","The Mandalorian","The Book of Boba Fett","Obi-Wan Kenobi","Andor","Ahsoka"],q:["En iyi Star Wars üçlemesi hangisi? Tek bir üçlemeyi savun.","Diziler filmlerden daha mı iyi? Andor ve Mandalorian üzerinden konuşun.","Işık tarafı mı karanlık taraf mı? Hangisi daha çekici?"]},
+"The Matrix":{e:"🕶️",t:["The Matrix (1999)"],q:["Mavi hap mı kırmızı hap mı? Gerçekten seçer miydin?","Simülasyonda yaşıyor olsaydık fark eder miydik?"]},
+"Marvel Filmleri":{e:"🦸",t:["Iron Man 1-2-3","Thor 1-2-3","Captain America 1-2-3","The Avengers 1-2-3","Guardians of the Galaxy","Doctor Strange 1-2","Spider-Man 1-2-3-4","Avengers: Endgame","Black Widow"],q:["MCU'nun en iyi filmi hangisi? Kanıtınla gel.","Iron Man'in son kararı doğru muydu?","Süper kahraman filmlerinden yoruldun mu?"]},
+"Marvel Dizileri":{e:"🕷️",t:["WandaVision","The Falcon and the Winter Soldier","Loki","Hawkeye","Moon Knight","Daredevil","The Punisher","Agents of SHIELD"],q:["En iyi Marvel dizisi hangisi ve neden?","Netflix dönemi Marvel mı Disney+ dönemi mi daha iyiydi?"]},
+"Açlık Oyunları":{e:"🏹",t:["Açlık Oyunları 1-2-3-4","Açlık Oyunları: yeni filmler"],q:["Katniss'in yerinde olsan gönüllü olur muydun?","Reality şovlar bugün Açlık Oyunları'na ne kadar yakın?"]},
+"Percy Jackson":{e:"🔱",t:["Percy Jackson: Dizi, filmler ve kitaplar"],q:["Hangi Olimpos tanrısının çocuğu olmak isterdin?","Kitap, film, dizi: hangisi en sadık uyarlama?"]},
+"Disney":{e:"🏰",t:["Aslan Kral (1994)","Alaaddin (1992)","Güzel ve Çirkin (1991)","Karlar Ülkesi 1","Karlar Ülkesi 2","Moana (2016)","Karmakarışık (2010)","Zootropolis (2016)","Büyük Kahraman 6","Karayip Korsanları (2003)"],q:["En iyi Disney şarkısı hangisi? Tek seçim.","Hangi Disney karakteri sana en çok benziyor?","Eski Disney filmleri mi yenileri mi daha iyi?"]},
+"Dune":{e:"🏜️",t:["Dune: kitaplar ve filmler"],q:["Dune'u okumadan izlemek mümkün mü?","Kaynak kıtlığı olan bir dünyada güç kimde olur?"]},
+"Nolan & Barbie":{e:"🎬",t:["Memento (2000)","The Prestige (2006)","The Dark Knight (2008)","Inception (2010)","The Dark Knight Rises (2012)","Interstellar (2014)","Dunkirk (2017)","Tenet (2020)","Oppenheimer (2023)","Barbie (2023)"],q:["Nolan'ın en iyi filmi hangisi? Sadece biri.","Inception'ın sonundaki topaç düştü mü?","Barbie mi Oppenheimer mı? Barbenheimer'da kim kazandı?"]},
+"Winx":{e:"🧚",t:["Winx Club (Çizgi Dizi)","Fate: The Winx Saga"],q:["Çizgi dizi mi Fate mi? Hangisi daha iyi?","Hangi Winx perisi olmak isterdin?"]},
+"Müzikaller":{e:"🎭",t:["Hamilton (2020)","Wicked (2024)"],q:["Wicked'ın tarafı: Elphaba mı Glinda mı?","Bir müzikal filmde şarkı ile anlatım gerçekçiliği bozar mı?"]},
+"TR Pop":{t:["Manifest","Crush"],q:["Manifest mi Crush mı? Tek bir şarkı seçip savun.","İkisinin de konserine bilet alma şansın olsa hangisine önce giderdin?","Hangisinin şarkıları daha çok sözüyle, hangisininki melodisiyle aklında kalıyor?"],sub:{"Manifest":["Manifest'in senin için en anlamlı şarkısı hangisi ve neden?","Bir Manifest şarkısını hayatındaki hangi ana film müziği yapardın?","Manifest'i hiç dinlememiş birine ilk hangi şarkıyı açardın?"],"Crush":["Crush'ın senin için en anlamlı şarkısı hangisi ve neden?","Bir Crush şarkısını hayatındaki hangi ana film müziği yapardın?","Crush'ı hiç dinlememiş birine ilk hangi şarkıyı açardın?"]}}};
+
+const TOP={};Object.entries(U).forEach(([u,o])=>o.t.forEach(t=>TOP[t]=u));
+const ALL=Object.keys(TOP),UE=Object.keys(U);
+const FREEQ=["Son zamanlarda izlediğin ya da okuduğun en iyi şey neydi? Gruba bir tavsiye ver.","Bir hikâyenin içinde yaşayabilseydin hangisini seçerdin?"];
+
+const sh=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const interest=(p,u)=>p.likes.filter(t=>TOP[t]===u).length;
+const split=(n,k)=>Array.from({length:k},(_,i)=>Math.floor(n/k)+(i<n%k?1:0));
+const sizesFor=(n,c)=>c.sizes.reduce((a,b)=>a+b,0)===n?[...c.sizes]:split(n,Math.max(1,Math.min(c.k,n)));
+function pickQs(g){if(!g.u)return FREEQ;const o=U[g.u];if(!o.sub)return o.q;const a=o.t.filter(t=>g.m.some(p=>p.likes.includes(t)));return a.length>1?o.q:(o.sub[a[0]]||o.q)}
+const glr=g=>g.u?g.u+(U[g.u].sub?" ("+U[g.u].t.filter(t=>g.m.some(p=>p.likes.includes(t))).join(" + ")+")":""):"Serbest sohbet";
+
+function buildRound(d,list,min){
+  const A=list.filter(p=>p.name).map(p=>({id:p.id,name:p.name,emoji:p.emoji||"kafeinBagimlisi",bio:p.bio||"",likes:p.likes||[],had:new Set()}));
+  if(A.length<(min||2))return null;
+  const by={},MET={},key=(a,b)=>a<b?a+"|"+b:b+"|"+a;A.forEach(p=>by[p.id]=p);
+  const add=ids=>{for(let i=0;i<ids.length;i++)for(let j=i+1;j<ids.length;j++){const k=key(ids[i],ids[j]);MET[k]=(MET[k]||0)+1}};
+  (d.hist||[]).forEach(r=>r.g.forEach(g=>{g.ids.forEach(id=>{if(g.u&&by[id])by[id].had.add(g.u)});add(g.ids)}));
+  const sz=sizesFor(A.length,d.cfg).sort((a,b)=>b-a);
+  const dem=u=>A.filter(p=>interest(p,u)>0&&!p.had.has(u)).length;
+  const tp=sh(UE).sort((a,b)=>dem(b)-dem(a)).slice(0,sz.length).map(u=>dem(u)>0?u:null);
+  const tc=(p,u)=>{if(!u)return 6;const it=interest(p,u);return(it>0?-10-Math.min(it,3):8)+(p.had.has(u)?30:0)};
+  const gc=(m,u)=>{let c=0;for(let i=0;i<m.length;i++){c+=tc(m[i],u);for(let j=i+1;j<m.length;j++)c+=12*(MET[key(m[i].id,m[j].id)]||0)}return c};
+  let best=null,bs=1e9;
+  for(let r=0;r<6;r++){
+    const o=sh(A);let s=0;const g=sz.map(n=>{const m=o.slice(s,s+n);s+=n;return m});
+    for(let it=0;it<2500;it++){
+      const a=Math.random()*g.length|0,b=Math.random()*g.length|0;if(a===b||!g[a].length||!g[b].length)continue;
+      const i=Math.random()*g[a].length|0,j=Math.random()*g[b].length|0;
+      const bf=gc(g[a],tp[a])+gc(g[b],tp[b]);[g[a][i],g[b][j]]=[g[b][j],g[a][i]];
+      if(gc(g[a],tp[a])+gc(g[b],tp[b])>bf)[g[a][i],g[b][j]]=[g[b][j],g[a][i]]
+    }
+    const t=g.reduce((x,m,i)=>x+gc(m,tp[i]),0);if(t<bs){bs=t;best=g}
+  }
+  const groups=best.map((m,i)=>{const g={u:tp[i]||null,m};return{u:g.u,label:glr(g),m:m.map(p=>({id:p.id,name:p.name,emoji:p.emoji,bio:p.bio})),qs:pickQs(g),qk:Math.random()*10|0,liked:g.u?m.filter(p=>interest(p,g.u)>0).length:0}});
+  best.forEach(m=>add(m.map(p=>p.id)));
+  const c=A.map(p=>A.filter(q=>q!==p&&MET[key(p.id,q.id)]).length/Math.max(1,A.length-1));
+  return{groups,hist:[...(d.hist||[]),{g:best.map((m,i)=>({u:tp[i]||null,ids:m.map(p=>p.id)}))}],cov:{avg:c.reduce((a,b)=>a+b,0)/c.length,min:Math.min(...c)}}
+}
+
+const $=document.getElementById("app");
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const mmss=s=>{s=Math.ceil(s/1000);return String(s/60|0).padStart(2,"0")+":"+String(s%60).padStart(2,"0")};
+
+const INFO=`<div class="chip" style="flex-direction:column;align-items:stretch;gap:8px;border-color:var(--beet-red)">
+  <div style="display:flex;align-items:center;justify-content:space-between">
+    <b style="font-family:'Akrobat', 'Fredoka', cursive, sans-serif;color:var(--beet-red);font-size:16px">☕ Nasıl Oynanır?</b>
+    <span class="mystery-badge">✨ Hızlı Tanışma</span>
+  </div>
+  <span class="mut">1. Karakterini ve adını seç, kartları sağa (isterim) veya sola (pas) kaydır.</span>
+  <span class="mut">2. Sistem seni ortak ilgi alanına sahip gizemli 5-6 kişilik masaya yerleştirir.</span>
+  <span class="mut">3. Host soruyu açınca masada 8 dk boyunca tatlı bir sohbet başlar.</span>
+  <span class="mut">4. 7 tur sürer: her turda masalar değişir, yepyeni insanlarla tanışırsın!</span>
+  <span class="mut">5. Takılırsan kırmızı butonla hostu çağırabilirsin.</span>
+</div>`;
+
+const S={role:null,name:"",emoji:"kafeinBagimlisi",bio:"",likes:[],i:0,order:[],runId:0,helpAt:0,err:"",email:""};
+let ST=null,PL=[],HELP=[],off=0,uid=null,unsubs=[],busy=false,booting=true,fatal="",lastSig="",LASTERR="";
+const VER="v13 · Geri dön + fotoğraflar ✨";
+const srv=()=>Date.now()+off;
+const thr=()=>(!ST||["setup","lobby","swipe"].includes(ST.phase))?300000:1200000;
+const seenMs=p=>p.seen&&p.seen.toMillis?p.seen.toMillis():0;
+const alive=p=>srv()-seenMs(p)<thr();
+const liveP=()=>PL.filter(p=>p.name&&alive(p));
+const left=()=>!ST?0:ST.paused?(ST.rem||0):Math.max(0,(ST.endAt||0)-srv());
+const dur=ph=>ph==="swipe"?(ST&&ST.demo?45000:300000):(ST&&ST.demo?20000:480000);
+
+function rng(seed){let a=0;for(const c of seed)a=(a*31+c.charCodeAt(0))|0;return()=>{a=(a+0x6D2B79F5)|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function shS(arr,r){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=r()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a}
+async function syncClock(){try{const r=doc(db,"pings",uid),t0=Date.now();await setDoc(r,{t:serverTimestamp()});const s=await getDocFromServer(r);off=s.data().t.toMillis()-(t0+Date.now())/2}catch(e){}}
+const fail=e=>{fatal="Bağlantı hatası: "+(e&&e.message||e)+" (Güvenlik kuralları yayınlandı mı?)";render()};
+const myGroup=()=>ST&&ST.groups?ST.groups.findIndex(g=>g.m.some(p=>p.id===uid)):-1;
+const qOf=g=>g.qs[(g.qk||0)%g.qs.length];
+const pw=o=>setDoc(doc(db,"players",uid),{name:S.name,emoji:S.emoji,bio:S.bio,likes:S.likes,i:S.i,done:S.order.length>0&&S.i>=S.order.length,rid:S.runId||0,seen:serverTimestamp(),...o}).catch(fail);
+
+onAuthStateChanged(auth,async u=>{
+  unsubs.forEach(f=>f());unsubs=[];ST=null;PL=[];HELP=[];
+  if(!u){S.role=null;uid=null;booting=false;render();return}
+  uid=u.uid;await syncClock();let init=false;
+  unsubs.push(onSnapshot(SREF,s=>{
+    ST=s.exists()?s.data():null;
+    if(S.role==="player"&&ST&&ST.phase==="swipe"&&S.name&&ST.runId!==S.runId){
+      S.runId=ST.runId;S.likes=[];S.i=0;pw({likes:[],i:0,done:false,rid:ST.runId});
+    }
+    render1();
+  },fail));
+  
+  if(u.isAnonymous){
+    S.role="player";S.order=shS(ALL,rng(uid));
+    unsubs.push(onSnapshot(doc(db,"players",uid),s=>{
+      if(!s.exists()){S.name="";S.likes=[];S.i=0}
+      else if(!init){
+        const d=s.data();
+        Object.assign(S,{name:d.name,emoji:d.emoji||"kafeinBagimlisi",bio:d.bio||"",likes:d.likes||[],i:d.i||0,runId:d.rid||0});
+      }
+      init=true;render1();
+    },fail));
+  }else{
+    S.role="host";S.email=u.email;
+    unsubs.push(onSnapshot(collection(db,"players"),s=>{PL=s.docs.map(d=>({id:d.id,...d.data({serverTimestamps:"estimate"})}));render1()},fail));
+    unsubs.push(onSnapshot(collection(db,"help"),s=>{HELP=s.docs.map(d=>({id:d.id,...d.data()}));render1()},fail));
+  }
+  booting=false;render();
+});
+
+const upd=o=>updateDoc(SREF,o).catch(fail);
+const H={
+  open(cfg,demo){return setDoc(SREF,{phase:"lobby",cfg,demo,round:0,groups:[],hist:[],paused:false,endAt:0,rem:0,runId:Date.now(),cov:null}).catch(fail)},
+  start(){upd({phase:"swipe",round:0,groups:[],hist:[],cov:null,runId:Date.now(),paused:false,endAt:srv()+dur("swipe")})},
+  ask(){upd({phase:"talk",paused:false,endAt:srv()+dur("talk")})},
+  chg(i){const g=[...ST.groups];g[i]={...g[i],qk:(g[i].qk||0)+1};upd({groups:g})},
+  pause(){ST.paused?upd({paused:false,endAt:srv()+(ST.rem||0)}):upd({paused:true,rem:left()})},
+  skip(){upd({paused:false,endAt:srv()})},
+  cancel(){upd({phase:"lobby",round:0,groups:[],hist:[],paused:false,cov:null,runId:Date.now()})},
+  edit(){upd({phase:"setup"})},
+  async reset(){const b=writeBatch(db);PL.forEach(p=>b.delete(doc(db,"players",p.id)));HELP.forEach(h=>b.delete(doc(db,"help",h.id)));b.delete(SREF);await b.commit().catch(fail)}
+};
+
+async function autoStep(){
+  if(busy||!ST||ST.paused)return;
+  if(ST.phase==="ready"){
+    const inG=new Set(ST.groups.flatMap(g=>g.m.map(p=>p.id)));
+    const miss=liveP().filter(p=>!inG.has(p.id));
+    if(miss.length){
+      busy=true;
+      try{
+        await runTransaction(db,async tx=>{
+          const d=(await tx.get(SREF)).data();if(d.phase!=="ready")throw"skip";
+          const ids=new Set(d.groups.flatMap(g=>g.m.map(p=>p.id))),gs=d.groups.map(g=>({...g,m:[...g.m]})),h=JSON.parse(JSON.stringify(d.hist||[]));let ch=false;
+          miss.filter(p=>!ids.has(p.id)).forEach(p=>{
+            let k=0;gs.forEach((g,i)=>{if(g.m.length<gs[k].m.length)k=i});
+            gs[k].m.push({id:p.id,name:p.name,emoji:p.emoji||"kafeinBagimlisi",bio:p.bio||""});
+            const last=h[h.length-1];if(last&&last.g[k])last.g[k].ids.push(p.id);ch=true;
+          });
+          if(ch)tx.update(SREF,{groups:gs,hist:h});
+        });
+      }catch(e){}
+      busy=false;return;
+    }
+  }
+  let kind=null;const named=liveP(),min=ST.demo?1:2;
+  if(ST.phase==="swipe"&&named.length>=min&&(srv()>=ST.endAt||named.every(p=>p.done)))kind="swipe";
+  else if(ST.phase==="talk"&&srv()>=ST.endAt)kind="talk";
+  if(!kind)return;
+  busy=true;
+  try{
+    await runTransaction(db,async tx=>{
+      const d=(await tx.get(SREF)).data();if(d.phase!==kind||d.paused)throw"skip";
+      if(kind==="talk"&&d.round>=7){tx.update(SREF,{phase:"end"});return}
+      const o=buildRound(d,liveP(),min);if(!o)throw"skip";
+      tx.update(SREF,{...o,phase:"ready",round:d.round+1,paused:false});
+    });
+    LASTERR="";
+  }catch(e){if(e!=="skip")LASTERR="Gruplama hatası: "+(e&&e.message||e)}
+  busy=false;
+}
+
+function liveText(){
+  const ph=ST?ST.phase:"setup",n=liveP();
+  if(ph==="setup")return"☕ Host oturumu hazırlıyor";
+  if(ph==="lobby")return`🌱 ${n.length}/${ST.cfg.n} oyuncu kafeye katıldı`;
+  if(ph==="swipe"&&left()===0&&n.length<(ST.demo?1:2))return`Süre doldu, grup için en az ${ST.demo?1:2} oyuncu gerekli (${n.length})`;
+  if(ph==="swipe")return`✨ Kartlar kaydırılıyor · ${n.filter(p=>p.done).length}/${n.length} tamamladı`;
+  if(ph==="ready")return`🌟 Tur ${ST.round}/7 · Masalar hazır! Yerlerinize geçin`;
+  if(ph==="talk")return`💬 Tur ${ST.round}/7 · Sohbet & tanışma zamanı!`;
+  return"🎉 Oturum tamamlandı, tanıştığınıza çok sevindik!";
+}
+
+const sig=()=>{
+  const ph=ST?ST.phase:"-";let s=S.role+"|"+ph+(ST?ST.round+""+ST.paused+(ST.groups||[]).map(g=>g.qk).join(""):"");
+  if(S.role==="host"&&ph!=="setup")s+="|"+LASTERR+liveP().length+","+liveP().filter(p=>p.done).length+","+HELP.length+","+(ST?ST.cov?Math.round(ST.cov.avg*100):"":"");
+  if(S.role==="player")s+="|"+(S.name?"1"+(S.order.length&&S.i>=S.order.length):"w");
+  return s+fatal;
+};
+
+function render1(){if(sig()!==lastSig)render();else tickUI()}
+function tickUI(){
+  const t=document.getElementById("t");if(t)t.textContent=(ST&&ST.paused?"⏸ ":"")+mmss(left());
+  const l=document.getElementById("live");if(l)l.textContent=liveText();
+}
+setInterval(()=>{tickUI();if(S.role==="host")autoStep()},500);
+
+const beat=()=>{if(S.role==="player"&&uid&&S.name)updateDoc(doc(db,"players",uid),{seen:serverTimestamp()}).catch(()=>{})};
+setInterval(beat,30000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)beat()});window.addEventListener("online",beat);
+
+async function cleanup(){
+  if(S.role!=="host"||!uid)return;const early=!ST||["setup","lobby","swipe"].includes(ST.phase);
+  const dead=PL.filter(p=>early?!alive(p):seenMs(p)===0);if(!dead.length)return;
+  const b=writeBatch(db);dead.forEach(p=>b.delete(doc(db,"players",p.id)));await b.commit().catch(()=>{});
+}
+setInterval(cleanup,30000);
+
+function render(){
+  lastSig=sig();
+  if(fatal){$.innerHTML=`<div class="warn" style="margin-top:40px"><b>${esc(fatal)}</b></div>`;return}
+  if(booting){$.innerHTML='<p class="mut" style="margin-top:60px;text-align:center;color:var(--crystal-blue)">☕ Sıcacık kahveler hazırlanıyor…</p>';return}
+  const ver=()=>{const v=document.createElement("p");v.className="mut";v.style.cssText="text-align:center;font-size:12px;margin-top:10px;color:var(--crystal-blue);";v.textContent=VER;$.appendChild(v)};
+  if(!S.role){roles();ver();return}
+  S.role==="host"?host():player();ver();
+  if(S.role==="host"){
+    const b=document.createElement("button");
+    b.className="g sm";
+    b.textContent="Çıkış";
+    b.style.marginTop="8px";
+    b.onclick=()=>signOut(auth);
+    $.appendChild(b);
+  }
+}
+
+function roles(){
+  $.innerHTML=`<div style="margin-top:18px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px">
+    <div style="width:70px;height:70px;display:flex;align-items:center;justify-content:center;background:var(--sea-pink);border-radius:24px;border:3px solid var(--beet-red);margin-bottom:4px;box-shadow:0 5px 0 var(--beet-red)">
+      <span style="font-size:36px">☕</span>
+    </div>
+    <h1>Tanışma Kahvemiz</h1>
+    <span class="mystery-badge">Meet &amp; Cute</span>
+    <p class="mut" style="margin-top:4px;color:var(--lemon-icing);text-shadow:0 2px 4px rgba(0,0,0,0.5)">15 Ekim Perşembe · 19.00 · The Stock Bahçeli<br>TOBB ETÜ Popüler Kültür Topluluğu</p>
+  </div>
+  ${INFO}
+  <p class="mut" style="text-align:center;margin-top:6px;color:var(--lemon-icing);text-shadow:0 2px 4px rgba(0,0,0,0.5)">Kim olarak katılıyorsun?</p>
+  <button id="pl" class="btn-green" style="font-size:18px">🙋 Oyuncuyum (Masalara Katıl)</button>
+  <button class="g" id="ho">🎛️ Host Panelini Aç</button>
+  <p class="mut" style="color:var(--sea-pink);text-align:center">${esc(S.err)}</p>`;
+  
+  $.querySelector("#pl").onclick=()=>signInAnonymously(auth).catch(e=>{S.err=e.message;render()});
+  $.querySelector("#ho").onclick=hostLogin;
+}
+
+function hostLogin(){
+  $.innerHTML=`<div style="margin-top:10px"><h2>🎛️ Host Girişi</h2><p class="mut" style="color:var(--crystal-blue)">Oturumu yönetmek için giriş yap.</p></div>
+  <input id="em" type="email" placeholder="E-posta">
+  <input id="pw" type="password" placeholder="Şifre">
+  <p style="color:var(--sea-pink)">${esc(S.err)}</p>
+  <button id="ok" class="btn-blue">Giriş Yap</button>
+  <button class="g" id="bk">Geri Dön</button>`;
+  $.querySelector("#bk").onclick=()=>{S.err="";render()};
+  $.querySelector("#ok").onclick=()=>signInWithEmailAndPassword(auth,$.querySelector("#em").value.trim(),$.querySelector("#pw").value).catch(()=>{S.err="E-posta veya şifre yanlış.";hostLogin()});
+}
+
+function setup(){
+  const c=ST&&ST.cfg||{n:25,k:5,sizes:[5,5,5,5,5]};
+  $.innerHTML=`<h2>Oturum Hazırlığı ⚙️</h2><p class="mut" style="color:var(--crystal-blue)">Masa ve oyuncu planını belirle.</p>
+  <div><p class="mut" style="color:var(--lemon-icing);margin-bottom:4px">Beklenen oyuncu sayısı</p><input id="n" type="number" value="${c.n}"></div>
+  <div><p class="mut" style="color:var(--lemon-icing);margin-bottom:4px">Masa sayısı</p><input id="k" type="number" value="${c.k}"></div>
+  <div><p class="mut" style="color:var(--lemon-icing);margin-bottom:4px">Masa büyüklükleri (örn: 5,5,5,5,5)</p><input id="s" value="${c.sizes.join(",")}"></div>
+  <label class="mut" style="display:flex;align-items:center;gap:8px;cursor:pointer;color:var(--lemon-icing)"><input type="checkbox" id="d" style="width:auto">⚡ Test hızı (süreler hızlanır)</label>
+  <p style="color:var(--sea-pink)">${esc(S.err)}</p>
+  <button id="ok" class="btn-green">Oturumu Başlat 🌱</button>`;
+  
+  const f=id=>$.querySelector("#"+id),upd2=()=>{f("s").value=split(+f("n").value||0,Math.max(1,+f("k").value||1)).join(",")};
+  f("n").oninput=upd2;f("k").oninput=upd2;
+  f("ok").onclick=async()=>{
+    const n=+f("n").value,k=+f("k").value,s=f("s").value.split(",").map(x=>+x.trim());
+    if(!(n>=8&&n<=80&&k>=2&&s.length===k&&s.every(x=>x>=3&&x<=8)&&s.reduce((a,b)=>a+b,0)===n)){
+      S.err="Sayılar tutmuyor: masa sayısı kadar büyüklük girin, toplamı oyuncu sayısı olsun (her masa 3-8).";setup();return;
+    }
+    S.err="";await H.open({n,k,sizes:s},f("d").checked);
+  };
+}
+
+function host(){
+  if(!ST||ST.phase==="setup")return setup();
+  const ph=ST.phase;
+  const btn=(id,t,cls)=>`<button id="${id}" class="${cls||""}">${t}</button>`;
+  let b="";
+  if(ph==="lobby")b=btn("start","▶ Kaydırmayı Başlat","btn-green")+btn("edit","⚙ Ayarları Değiştir","g");
+  if(ph==="swipe"||ph==="talk")b=btn("pause",ST.paused?"▶ Devam":"⏸ Duraklat","g")+btn("skip","⏭ Süreyi Bitir (Test)","g");
+  if(ph==="ready")b=btn("ask","✅ Masalar Doldu, Soruyu Başlat","btn-blue");
+  if(ph==="end")b=btn("reset","Yeni Oturum Başlat (Temizle)","btn-green");
+  if(ph!=="lobby"&&ph!=="end")b+=btn("cancel","✕ İptal Et","g");
+  
+  const danger=S.cr?`<div class="warn" style="gap:10px;margin-top:6px"><b>⚠️ Emin misin?</b><span>Bu işlem herkes için oyunu sıfırlar. Tüm oyuncular, gruplar ve tur ilerlemesi silinir. Herkes en baştan isim girip kaydolacak. Bu işlem geri alınamaz.</span><div style="display:flex;gap:10px"><button id="crYes" class="btn-green" style="flex:1">Evet, sıfırla</button><button id="crNo" class="g" style="flex:1">Vazgeç</button></div></div>`:`<div style="margin-top:6px">${btn("resetAll","🔄 Herkes için sıfırla ve baştan başlat","g")}</div>`;
+  const c=ST.cfg,cv=ST.cov?`<span class="mut" style="color:var(--fg-muted-dark)">Tanışma kapsamı: ortalama %${Math.round(ST.cov.avg*100)}, en düşük %${Math.round(ST.cov.min*100)}</span>`:"";
+  
+  $.innerHTML=`<div class="bar"><h2>Host Paneli 🎛️</h2><span class="pill" id="t"></span></div>
+  <div class="chip" style="flex-direction:column;align-items:stretch;gap:6px">
+    <b id="live" style="color:var(--beet-red);font-size:15px">${esc(liveText())}</b>
+    <span class="mut" style="color:var(--fg-muted-dark)">Plan: ${c.n} oyuncu, ${c.k} masa (${c.sizes.join("+")}) · Tur ${ST.round}/7</span>
+    ${cv}
+  </div>
+  ${LASTERR?`<div class="warn"><b>${esc(LASTERR)}</b></div>`:""}
+  ${HELP.length?`<div class="warn"><b>🆘 Masalardan Yardım Çağrıları</b>${HELP.map((h,i)=>`<div class="bar"><span>${esc(h.name)} (${esc(h.g)})</span><button class="g sm" data-h="${i}">Tamam</button></div>`).join("")}</div>`:""}
+  ${b}
+  ${(ph==="ready"||ph==="talk")?ST.groups.map((g,i)=>`<div class="chip" style="flex-direction:column;align-items:stretch;gap:8px">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <b style="font-family:'Akrobat', 'Fredoka', cursive, sans-serif;color:var(--beet-red);font-size:16px">Masa ${i+1} · ${esc(g.label)} (${g.m.length} kişi)</b>
+      <span class="pill" style="font-size:11px;padding:3px 10px">${g.u?g.liked+" ortak ilgi":"serbest"}</span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px">
+      ${g.m.map(p=>`<span style="background:var(--lemon-icing);color:var(--beet-red);border:2px solid var(--beet-red);padding:4px 10px;border-radius:12px;font-size:13px;display:inline-flex;align-items:center;gap:4px;font-weight:800">
+        <span style="width:18px;height:18px;display:inline-flex;border-radius:4px;overflow:hidden">${getAvatarSvg(p.emoji)}</span> ${esc(p.name)}
+      </span>`).join("")}
+    </div>
+    <div style="background:var(--lemon-icing);color:var(--beet-red);border:2px solid var(--beet-red);padding:10px 14px;border-radius:14px;font-size:14px;font-weight:800">💬 ${esc(qOf(g))}</div>
+    <button class="g sm" data-q="${i}">🔄 Başka Soru Aç</button>
+  </div>`).join(""):""}
+  ${danger}`;
+  
+  const on=(id,f)=>{const e=$.querySelector("#"+id);if(e)e.onclick=f};
+  on("start",H.start);on("pause",H.pause);on("skip",H.skip);on("ask",H.ask);on("cancel",H.cancel);on("reset",()=>{S.cr=true;render()});on("resetAll",()=>{S.cr=true;render()});on("crNo",()=>{S.cr=false;render()});on("crYes",async()=>{S.cr=false;await H.reset()});on("edit",H.edit);
+  $.querySelectorAll("[data-q]").forEach(e=>e.onclick=()=>H.chg(+e.dataset.q));
+  $.querySelectorAll("[data-h]").forEach(e=>e.onclick=()=>{const h=HELP[+e.dataset.h],b=writeBatch(db);b.delete(doc(db,"help",h.id));b.commit().catch(fail)});
+}
+
+function player(){
+  if(!S.name)return welcome();
+  const ph=ST?ST.phase:"setup";
+  let h="";
+  const wait=(e,t,s)=>`<div style="margin:40px 0;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px">
+    <div class="avatar-badge-rendered" style="width:80px;height:80px;border-radius:28px">${e}</div>
+    <h2 style="color:var(--lemon-icing)">${t}</h2>
+    <p class="mut" style="max-width:320px;color:var(--crystal-blue)">${s||""}</p>
+  </div>`;
+  
+  if(ph==="setup"||ph==="lobby"){
+    h=wait(getAvatarSvg(S.emoji),"Hoş geldin, "+esc(S.name)+"! ✨","Host kaydırmayı başlattığında kartların gelecek. Arkana yaslan ve kahvenden bir yudum al.")+INFO;
+  }else if(ph==="swipe"&&S.i<S.order.length){
+    h="SWIPE";
+  }else if(ph==="swipe"){
+    h=wait(getAvatarSvg(S.emoji),"Seçimlerin Kaydedildi! ⏳","Diğer kahveseverlerin seçimlerini tamamlaması bekleniyor. Masalar birazdan kuruluyor…");
+  }else if(ph==="ready"||ph==="talk"){
+    const k=myGroup();
+    if(k<0){
+      h=wait(getAvatarSvg(S.emoji),"Bu turda masan hazırlanıyor","Sonraki turda seni uygun bir masaya yerleştireceğiz. Acil durumda kırmızı butonu kullanabilirsin.");
+    }else{
+      const g=ST.groups[k];
+      if(ph==="ready"){
+        h=`<div style="display:flex;align-items:center;justify-content:space-between">
+          <h2>Masa ${k+1} ☕</h2>
+          <span class="pill">${esc(g.label)}</span>
+        </div>
+        <p class="mut" style="color:var(--crystal-blue)">Lütfen ${k+1}. masaya geç! Herkes toplanınca host sohbet sorusunu başlatacak.</p>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:6px">
+          ${g.m.map(p=>`<div class="chip ${p.id===uid?"me":""}">
+            <div class="avatar-badge-rendered">${getAvatarSvg(p.emoji)}</div>
+            <div>
+              <b style="font-size:16px;color:var(--beet-red)">${esc(p.name)}${p.id===uid?" (Sen) ✨":""}</b>
+              ${p.bio?`<div class="mut" style="font-size:13px">${esc(p.bio)}</div>`:""}
+            </div>
+          </div>`).join("")}
+        </div>`;
+      }else{
+        h=`<div style="text-align:center">
+          <span class="pill">Masa ${k+1} · ${esc(g.label)}</span>
+          <div class="timer" id="t">${mmss(left())}</div>
+        </div>
+        <div class="q">💬 ${esc(qOf(g))}</div>
+        <div class="chip" style="margin-top:4px;background:var(--crystal-blue);border-color:var(--beet-red);color:var(--beet-red)">
+          <span style="font-size:22px">💡</span>
+          <span class="mut" style="color:var(--beet-red);font-weight:800">Herkesin söz almasına özen gösterin, süreniz dolunca yeni masalara geçeceksiniz!</span>
+        </div>`;
+      }
+    }
+  }else{
+    h=wait(getAvatarSvg(S.emoji),"Harika Bir Geceydi! 🎉","7 tur boyunca yeni insanlarla tanıştın. Umuyoruz ki harika dostlukların ilk adımı olmuştur!");
+  }
+
+  $.innerHTML=`<div class="bar">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div class="avatar-badge-rendered" style="width:40px;height:40px">${getAvatarSvg(S.emoji)}</div>
+      <b style="font-family:'Akrobat', 'Fredoka', cursive, sans-serif;font-size:18px;color:var(--lemon-icing)">${esc(S.name)}</b>
+    </div>
+    ${ph==="swipe"?'<span class="pill" id="t"></span>':`<span class="mystery-badge" style="font-size:12px;padding:5px 12px">Tur ${ST?ST.round:0}/7</span>`}
+  </div>
+  <div class="prog-wrapper"><div class="prog"><i style="width:${ST?ST.round/7*100:0}%"></i></div></div>
+  ${ST&&ST.paused?'<div class="warn">⏸ Host oturumu kısa bir süre duraklattı</div>':""}
+  ${h==="SWIPE"?'<div class="stage" id="st"></div><div class="sw"><button class="g" id="no" title="Pas geç">✕</button><button class="btn-green" id="yes" title="Konuşmak isterim">✓</button></div>':h}
+  ${["swipe","ready","talk"].includes(ph)?'<button class="sos" id="sos">🆘 Hostu Çağır (Yardım)</button>':""}`;
+
+  const sos=$.querySelector("#sos");
+  if(sos)sos.onclick=()=>{
+    if(Date.now()-S.helpAt<30000){sos.textContent="✓ Çağrı gönderildi, bekleniyor";return}
+    S.helpAt=Date.now();const k=myGroup();
+    addDoc(collection(db,"help"),{uid,name:S.name,g:k>=0?"Masa "+(k+1):"Grup bekliyor",at:serverTimestamp()}).catch(fail);
+    sos.textContent="✓ Host çağrıldı, geliyor!";
+  };
+
+  if(h==="SWIPE")swipeUI();
+}
+
+function welcome(){
+  $.innerHTML=`<div><button class="g sm" id="back">← Geri dön</button></div>
+  <div style="margin-top:6px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px">
+    <div style="width:64px;height:64px;border-radius:22px;background:var(--sea-pink);border:3px solid var(--beet-red);display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 4px 0 var(--beet-red)">☕</div>
+    <h1>Kahveye Hoş Geldin!</h1>
+    <p class="mut" style="color:var(--lemon-icing);text-shadow:0 2px 4px rgba(0,0,0,0.5)">Karakter arketipini seç ve kendini tanıt.</p>
+  </div>
+  
+  <input id="n" maxlength="20" placeholder="Adın veya takma adın" style="margin-top:8px">
+  
+  <div>
+    <p class="mut" style="margin-bottom:8px;color:var(--lemon-icing);text-shadow:0 2px 4px rgba(0,0,0,0.5)">Seni En İyi Tanımlayan Çıkartmayı Seç ✨</p>
+    <div class="avatar-sticker-grid">
+      ${STICKER_KEYS.map(k=>`
+        <div class="sticker-badge-btn ${k===S.emoji?"on":""}" data-k="${k}">
+          <div class="badge-icon">${STICKERS[k].svg}</div>
+          <span class="badge-label">${STICKERS[k].label}</span>
+        </div>
+      `).join("")}
+    </div>
+  </div>
+
+  <input id="b" maxlength="60" placeholder="Tek cümleyle kendinden bahset (isteğe bağlı)">
+  <button id="go" class="btn-green" style="font-size:18px;margin-top:4px">Kafeye Giriş Yap ✨</button>`;
+
+  $.querySelectorAll(".sticker-badge-btn").forEach(btn=>{
+    btn.onclick=()=>{
+      S.emoji=btn.dataset.k;
+      $.querySelectorAll(".sticker-badge-btn").forEach(x=>x.classList.toggle("on",x===btn));
+    };
+  });
+
+  $.querySelector("#back").onclick=()=>{S.err="";signOut(auth)};
+  $.querySelector("#go").onclick=async()=>{
+    const n=$.querySelector("#n").value.trim();
+    if(!n){$.querySelector("#n").focus();return}
+    S.name=n;
+    S.bio=$.querySelector("#b").value.trim();
+    S.likes=[];S.i=0;
+    S.runId=ST&&ST.phase==="swipe"?0:(ST?ST.runId:0);
+    await pw({});
+    render();
+  };
+}
+
+function swipeUI(){
+  const st=$.querySelector("#st"),total=S.order.length;
+  function show(){
+    if(S.i>=total||!ST||ST.phase!=="swipe"){render();return}
+    const t=S.order[S.i],u=TOP[t],emo=U[u]?U[u].e:"☕";
+    st.innerHTML=`<div class="card" id="c">
+      <span class="tag y" id="ty">İSTERİM ✓</span>
+      <span class="tag n" id="tn">PAS ✕</span>
+      <span class="category-pill">${esc(u)}</span>
+      <div class="card-emoji-wrap">${emo}</div>
+      <h2>${esc(t)}</h2>
+      <p class="mut" style="font-size:14px;color:var(--fg-muted-dark)">Bu konu hakkında masada konuşmak ister misin?</p>
+      <span class="pill" style="font-size:11px;padding:4px 12px;margin-top:4px">${S.i+1} / ${total}</span>
+    </div>`;
+
+    const c=st.querySelector("#c");let sx=0,dx=0,dr=false;
+    c.onpointerdown=e=>{sx=e.clientX;dr=true;c.style.transition="none";c.setPointerCapture(e.pointerId)};
+    c.onpointermove=e=>{
+      if(!dr)return;dx=e.clientX-sx;
+      c.style.transform=`translateX(${dx}px) rotate(${dx/18}deg)`;
+      c.querySelector("#ty").style.opacity=Math.max(0,dx/80);
+      c.querySelector("#tn").style.opacity=Math.max(0,-dx/80);
+    };
+    c.onpointerup=()=>{
+      dr=false;c.style.transition="transform .25s ease-out";
+      if(Math.abs(dx)>85)ans(dx>0);
+      else{
+        c.style.transform="";
+        c.querySelector("#ty").style.opacity=0;
+        c.querySelector("#tn").style.opacity=0;
+      }
+      dx=0;
+    };
+  }
+
+  function ans(y){
+    const c=st.querySelector("#c");
+    if(!c||(ST&&ST.paused))return;
+    if(y)S.likes.push(S.order[S.i]);
+    c.style.transition="transform .25s ease-out, opacity .25s";
+    c.style.transform=`translateX(${y?550:-550}px) rotate(${y?30:-30}deg)`;
+    c.style.opacity=0;
+    S.i++;
+    pw({});
+    setTimeout(show,220);
+  }
+
+  $.querySelector("#yes").onclick=()=>ans(true);
+  $.querySelector("#no").onclick=()=>ans(false);
+  show();
+}
+</script>
+
+
+
+
+</body></html>
