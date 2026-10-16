@@ -3,14 +3,14 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
 <link href="https://fonts.googleapis.com/css2?family=Titan+One&amp;family=Fredoka:wght@600;700;800;900&amp;family=Bowlby+One+SC&amp;family=Righteous&amp;family=Nunito:wght@700;800;900&amp;display=swap" rel="stylesheet">
 <style>
-@font-face{font-family:'Akrobat';src:url('/fonts/akrobat-thin.otf') format('opentype');font-weight:100;font-style:normal;font-display:swap}
-@font-face{font-family:'Akrobat';src:url('/fonts/akrobat-extralight.otf') format('opentype');font-weight:200;font-style:normal;font-display:swap}
-@font-face{font-family:'Akrobat';src:url('/fonts/akrobat-light.otf') format('opentype');font-weight:300;font-style:normal;font-display:swap}
-@font-face{font-family:'Akrobat';src:url('/fonts/akrobat-regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'Akrobat';src:url('/fonts/akrobat-semibold.otf') format('opentype');font-weight:600;font-style:normal;font-display:swap}
-@font-face{font-family:'Akrobat';src:url('/fonts/akrobat-bold.otf') format('opentype');font-weight:700;font-style:normal;font-display:swap}
-@font-face{font-family:'Akrobat';src:url('/fonts/akrobat-extrabold.otf') format('opentype');font-weight:800;font-style:normal;font-display:swap}
-@font-face{font-family:'Akrobat';src:url('/fonts/akrobat-black.otf') format('opentype');font-weight:900;font-style:normal;font-display:swap}
+@font-face{font-family:'Akrobat';src:url('fonts/akrobat-thin.otf') format('opentype');font-weight:100;font-style:normal;font-display:swap}
+@font-face{font-family:'Akrobat';src:url('fonts/akrobat-extralight.otf') format('opentype');font-weight:200;font-style:normal;font-display:swap}
+@font-face{font-family:'Akrobat';src:url('fonts/akrobat-light.otf') format('opentype');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Akrobat';src:url('fonts/akrobat-regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Akrobat';src:url('fonts/akrobat-semibold.otf') format('opentype');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Akrobat';src:url('fonts/akrobat-bold.otf') format('opentype');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Akrobat';src:url('fonts/akrobat-extrabold.otf') format('opentype');font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:'Akrobat';src:url('fonts/akrobat-black.otf') format('opentype');font-weight:900;font-style:normal;font-display:swap}
 :root{
   /* 5-Color Exact Palette from Spec */
   --rum-raisin: #441910;
@@ -619,15 +619,15 @@ const auth=getAuth(app),db=getFirestore(app),SREF=doc(db,"session","state");
 
 /* 9 ARCHETYPE PHOTO STICKERS */
 const STICKERS = {
-  kitapKurdu: { id: "kitapKurdu", label: "Kitap kurdu", svg: `<img src="/images/stickers/kitapKurdu.jpg" alt="Kitap kurdu" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
-  marvelFani: { id: "marvelFani", label: "Marvel Fanı", svg: `<img src="/images/stickers/marvelFani.jpg" alt="Marvel Fanı" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
-  gamer: { id: "gamer", label: "Gamer", svg: `<img src="/images/stickers/gamer.jpg" alt="Gamer" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
-  muziksever: { id: "muziksever", label: "Müziksever", svg: `<img src="/images/stickers/muziksever.jpg" alt="Müziksever" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
-  sanatsever: { id: "sanatsever", label: "Sanatsever", svg: `<img src="/images/stickers/sanatsever.jpg" alt="Sanatsever" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
-  kafeinBagimlisi: { id: "kafeinBagimlisi", label: "Kafein bağımlısı", svg: `<img src="/images/stickers/kafeinBagimlisi.jpg" alt="Kafein bağımlısı" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
-  nerd: { id: "nerd", label: "Nerd", svg: `<img src="/images/stickers/nerd.jpg" alt="Nerd" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
-  animeci: { id: "animeci", label: "Animeci", svg: `<img src="/images/stickers/animeci.jpg" alt="Animeci" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
-  starWarsFani: { id: "starWarsFani", label: "Star Wars fanı", svg: `<img src="/images/stickers/starWarsFani.jpg" alt="Star Wars fanı" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` }
+  kitapKurdu: { id: "kitapKurdu", label: "Kitap kurdu", svg: `<img src="images/stickers/kitapKurdu.jpg" alt="Kitap kurdu" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
+  marvelFani: { id: "marvelFani", label: "Marvel Fanı", svg: `<img src="images/stickers/marvelFani.jpg" alt="Marvel Fanı" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
+  gamer: { id: "gamer", label: "Gamer", svg: `<img src="images/stickers/gamer.jpg" alt="Gamer" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
+  muziksever: { id: "muziksever", label: "Müziksever", svg: `<img src="images/stickers/muziksever.jpg" alt="Müziksever" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
+  sanatsever: { id: "sanatsever", label: "Sanatsever", svg: `<img src="images/stickers/sanatsever.jpg" alt="Sanatsever" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
+  kafeinBagimlisi: { id: "kafeinBagimlisi", label: "Kafein bağımlısı", svg: `<img src="images/stickers/kafeinBagimlisi.jpg" alt="Kafein bağımlısı" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
+  nerd: { id: "nerd", label: "Nerd", svg: `<img src="images/stickers/nerd.jpg" alt="Nerd" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
+  animeci: { id: "animeci", label: "Animeci", svg: `<img src="images/stickers/animeci.jpg" alt="Animeci" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` },
+  starWarsFani: { id: "starWarsFani", label: "Star Wars fanı", svg: `<img src="images/stickers/starWarsFani.jpg" alt="Star Wars fanı" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">` }
 };
 
 const STICKER_KEYS = Object.keys(STICKERS);
@@ -715,7 +715,7 @@ const INFO=`<div class="chip" style="flex-direction:column;align-items:stretch;g
 
 const S={role:null,name:"",emoji:"kafeinBagimlisi",bio:"",likes:[],i:0,order:[],runId:0,helpAt:0,err:"",email:""};
 let ST=null,PL=[],HELP=[],off=0,uid=null,unsubs=[],busy=false,booting=true,fatal="",lastSig="",LASTERR="";
-const VER="v13 · Geri dön + fotoğraflar ✨";
+const VER="v14 · Alt klasör yolu ✨";
 const srv=()=>Date.now()+off;
 const thr=()=>(!ST||["setup","lobby","swipe"].includes(ST.phase))?300000:1200000;
 const seenMs=p=>p.seen&&p.seen.toMillis?p.seen.toMillis():0;
