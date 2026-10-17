@@ -592,7 +592,7 @@ input:focus,textarea:focus{
     </div>
     <h1 class="">Tanışma Kahvemiz</h1>
     <span class="mystery-badge">Meet &amp; Cute</span>
-    <p class="mut" style="margin-top: 4px; color: var(--lemon-icing); text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px;">15 Ekim Perşembe · 19.00 · The Stock Bahçeli<br>TOBB ETÜ Popüler Kültür Topluluğu</p>
+    <p class="mut" style="margin-top: 4px; color: var(--lemon-icing); text-shadow: rgba(0, 0, 0, 0.5) 0px 2px 4px;">18 Ekim Pazar · 19.00 · The Stock Bahçeli<br>TOBB ETÜ Popüler Kültür Topluluğu</p>
   </div>
   <div class="chip" style="flex-direction:column;align-items:stretch;gap:8px;border-color:var(--beet-red)">
   <div style="display:flex;align-items:center;justify-content:space-between">
@@ -643,21 +643,374 @@ function getAvatarSvg(key){
 }
 
 const U={
-"Yüzüklerin Efendisi":{e:"💍",t:["Yüzüklerin Efendisi 1-2-3","Hobbit 1-2-3","The Rings of Power (Dizi)"],q:["Gandalf mi Aragorn mu: Orta Dünya'nın asıl kahramanı kim?","Bir yüzük sana sınırsız güç verse onu yok etmeye gider miydin?","Hobbit filmleri üç parçaya bölünmeyi hak etti mi?"]},
-"Harry Potter":{e:"⚡",t:["Harry Potter filmleri (1-7)","Harry Potter kitapları (1-7)","Yeni Harry Potter Dizisi"],q:["Film mi kitap mı? Hangisi hikâyeyi daha iyi anlattı?","Hangi eve ait olduğunu düşünüyorsun ve neden?","Yeni dizi gerekli mi, yoksa eski filmler dokunulmaz mı?"]},
-"Star Wars":{e:"🚀",t:["Star Wars 1-2-3 (2000'ler)","Star Wars 4-5-6 (80'ler)","Star Wars 7-8-9 (2010'lar)","Rogue One / Solo","The Mandalorian","The Book of Boba Fett","Obi-Wan Kenobi","Andor","Ahsoka"],q:["En iyi Star Wars üçlemesi hangisi? Tek bir üçlemeyi savun.","Diziler filmlerden daha mı iyi? Andor ve Mandalorian üzerinden konuşun.","Işık tarafı mı karanlık taraf mı? Hangisi daha çekici?"]},
-"The Matrix":{e:"🕶️",t:["The Matrix (1999)"],q:["Mavi hap mı kırmızı hap mı? Gerçekten seçer miydin?","Simülasyonda yaşıyor olsaydık fark eder miydik?"]},
-"Marvel Filmleri":{e:"🦸",t:["Iron Man 1-2-3","Thor 1-2-3","Captain America 1-2-3","The Avengers 1-2-3","Guardians of the Galaxy","Doctor Strange 1-2","Spider-Man 1-2-3-4","Avengers: Endgame","Black Widow"],q:["MCU'nun en iyi filmi hangisi? Kanıtınla gel.","Iron Man'in son kararı doğru muydu?","Süper kahraman filmlerinden yoruldun mu?"]},
-"Marvel Dizileri":{e:"🕷️",t:["WandaVision","The Falcon and the Winter Soldier","Loki","Hawkeye","Moon Knight","Daredevil","The Punisher","Agents of SHIELD"],q:["En iyi Marvel dizisi hangisi ve neden?","Netflix dönemi Marvel mı Disney+ dönemi mi daha iyiydi?"]},
-"Açlık Oyunları":{e:"🏹",t:["Açlık Oyunları 1-2-3-4","Açlık Oyunları: yeni filmler"],q:["Katniss'in yerinde olsan gönüllü olur muydun?","Reality şovlar bugün Açlık Oyunları'na ne kadar yakın?"]},
-"Percy Jackson":{e:"🔱",t:["Percy Jackson: Dizi, filmler ve kitaplar"],q:["Hangi Olimpos tanrısının çocuğu olmak isterdin?","Kitap, film, dizi: hangisi en sadık uyarlama?"]},
-"Disney":{e:"🏰",t:["Aslan Kral (1994)","Alaaddin (1992)","Güzel ve Çirkin (1991)","Karlar Ülkesi 1","Karlar Ülkesi 2","Moana (2016)","Karmakarışık (2010)","Zootropolis (2016)","Büyük Kahraman 6","Karayip Korsanları (2003)"],q:["En iyi Disney şarkısı hangisi? Tek seçim.","Hangi Disney karakteri sana en çok benziyor?","Eski Disney filmleri mi yenileri mi daha iyi?"]},
-"Dune":{e:"🏜️",t:["Dune: kitaplar ve filmler"],q:["Dune'u okumadan izlemek mümkün mü?","Kaynak kıtlığı olan bir dünyada güç kimde olur?"]},
-"Nolan & Barbie":{e:"🎬",t:["Memento (2000)","The Prestige (2006)","The Dark Knight (2008)","Inception (2010)","The Dark Knight Rises (2012)","Interstellar (2014)","Dunkirk (2017)","Tenet (2020)","Oppenheimer (2023)","Barbie (2023)"],q:["Nolan'ın en iyi filmi hangisi? Sadece biri.","Inception'ın sonundaki topaç düştü mü?","Barbie mi Oppenheimer mı? Barbenheimer'da kim kazandı?"]},
-"Winx":{e:"🧚",t:["Winx Club (Çizgi Dizi)","Fate: The Winx Saga"],q:["Çizgi dizi mi Fate mi? Hangisi daha iyi?","Hangi Winx perisi olmak isterdin?"]},
-"Müzikaller":{e:"🎭",t:["Hamilton (2020)","Wicked (2024)"],q:["Wicked'ın tarafı: Elphaba mı Glinda mı?","Bir müzikal filmde şarkı ile anlatım gerçekçiliği bozar mı?"]},
-"TR Pop":{t:["Manifest","Crush"],q:["Manifest mi Crush mı? Tek bir şarkı seçip savun.","İkisinin de konserine bilet alma şansın olsa hangisine önce giderdin?","Hangisinin şarkıları daha çok sözüyle, hangisininki melodisiyle aklında kalıyor?"],sub:{"Manifest":["Manifest'in senin için en anlamlı şarkısı hangisi ve neden?","Bir Manifest şarkısını hayatındaki hangi ana film müziği yapardın?","Manifest'i hiç dinlememiş birine ilk hangi şarkıyı açardın?"],"Crush":["Crush'ın senin için en anlamlı şarkısı hangisi ve neden?","Bir Crush şarkısını hayatındaki hangi ana film müziği yapardın?","Crush'ı hiç dinlememiş birine ilk hangi şarkıyı açardın?"]}}};
-
+"Yüzüklerin Efendisi": {
+"e": "💍",
+"t": [
+"Yüzüklerin Efendisi 1-2-3",
+"Hobbit 1-2-3",
+"The Rings of Power (Dizi)"
+],
+"q": [
+"Gandalf mi Aragorn mu: Orta Dünya'nın asıl kahramanı kim?",
+"Bir yüzük sana sınırsız güç verse onu yok etmeye gider miydin?",
+"Hobbit filmleri üç parçaya bölünmeyi hak etti mi?"
+]
+},
+"Harry Potter": {
+"e": "⚡",
+"t": [
+"Harry Potter filmleri (1-7)",
+"Harry Potter kitapları (1-7)",
+"Yeni Harry Potter Dizisi"
+],
+"q": [
+"Film mi kitap mı? Hangisi hikâyeyi daha iyi anlattı?",
+"Hangi eve ait olduğunu düşünüyorsun ve neden?",
+"Yeni dizi gerekli mi, yoksa eski filmler dokunulmaz mı?"
+]
+},
+"Star Wars": {
+"e": "🚀",
+"t": [
+"Star Wars 1-2-3 (2000'ler)",
+"Star Wars 4-5-6 (80'ler)",
+"Star Wars 7-8-9 (2010'lar)",
+"Rogue One / Solo",
+"The Mandalorian",
+"The Book of Boba Fett",
+"Obi-Wan Kenobi",
+"Andor",
+"Ahsoka"
+],
+"q": [
+"En iyi Star Wars üçlemesi hangisi? Tek bir üçlemeyi savun.",
+"Star Wars dizilerini takip ediyor musunuz? Sizce gerekliler mi?",
+"Star Wars evreninde kim olurdunuz (Jedi, counselor...) Işık tarafı mı karanlık taraf mı? Sağdan başlayarak sırayla fikir belirtin"
+]
+},
+"The Matrix": {
+"e": "🕶️",
+"t": [
+"The Matrix (1999)"
+],
+"q": [
+"Mavi hap mı kırmızı hap mı? Gerçekten seçer miydin?",
+"Simülasyonda yaşıyor olsaydık fark eder miydik?"
+]
+},
+"Marvel Filmleri": {
+"e": "🦸",
+"t": [
+"Iron Man 1-2-3",
+"Thor 1-2-3",
+"Captain America 1-2-3",
+"The Avengers 1-2-3",
+"Guardians of the Galaxy",
+"Doctor Strange 1-2",
+"Spider-Man 1-2-3-4",
+"Avengers: Endgame",
+"Black Widow"
+],
+"q": [
+"MCU'nun en iyi filmi hangisi? Neden?",
+"Loki Endgame'de kaçtığı için TVA tarafından kaldırılırken neden TVA, Kaptan Amerika'nın Peggy ile yaşlanmasına izin verdi?",
+"İlk filmlerdeki Black Widow'dan bu yana Marvel kadın kahramanlar hakkında ne kadar yol aldı?"
+],
+"o": [
+{
+"a": "Avengers: Endgame",
+"b": "Captain America 1-2-3",
+"q": "Team Cap mi? Team Iron Man mi?"
+}
+]
+},
+"Marvel Dizileri": {
+"e": "🕷️",
+"t": [
+"WandaVision",
+"The Falcon and the Winter Soldier",
+"Loki",
+"Hawkeye",
+"Moon Knight",
+"Daredevil",
+"The Punisher",
+"Agents of SHIELD"
+],
+"q": [
+"En iyi Marvel dizisi hangisi ve neden?",
+"Sylvie (Loki) underrated bir karakter ve MCU'daki rolü çok büyük. He who remains'i öldürmekle doğru şeyi yaptı? Sacred timeline gerekli mi?",
+"Disney+ sayesinde bir sürü dizimiz oldu ama sizce Marvel'ın Disney tarafından satın alınmasına değdi mi?"
+]
+},
+"Açlık Oyunları": {
+"e": "🏹",
+"t": [
+"Açlık Oyunları 1-2-3-4",
+"Açlık Oyunları: yeni filmler"
+],
+"q": [
+"Katniss'in yerinde olsan gönüllü olur muydun?",
+"Reality şovlar bugün Açlık Oyunları'na ne kadar yakın?"
+]
+},
+"Percy Jackson": {
+"e": "🔱",
+"t": [
+"Percy Jackson: Dizi, filmler ve kitaplar"
+],
+"q": [
+"Hangi Olimpos tanrısının çocuğu olmak isterdin?",
+"Dizide Annabeth'in kitaplardaki tasvirinden (sarışın, gri gözlü) farklı bir oyuncuyla canlandırılması sence sorun mu? Bir uyarlamada kitaba sadakat mi, oyuncular arasındaki kimya mı daha önemli?"
+]
+},
+"Disney": {
+"e": "🏰",
+"t": [
+"Aslan Kral (1994)",
+"Alaaddin (1992)",
+"Güzel ve Çirkin (1991)",
+"Karlar Ülkesi 1",
+"Karlar Ülkesi 2",
+"Moana (2016)",
+"Karmakarışık (2010)",
+"Zootropolis (2016)",
+"Büyük Kahraman 6",
+"Karayip Korsanları (2003)"
+],
+"q": [
+"En iyi Disney şarkısı hangisi? Tek seçim. Herkes fikrini savunsun",
+"Hangi Disney karakteri sana en çok benziyor? Sağdan başlayarak nedenleriyle anlatın.",
+"Kapitalizm en çok da animasyon dünyasını mahvetti. Örneklerle fikrini savun"
+]
+},
+"Dune": {
+"e": "🏜️",
+"t": [
+"Dune: kitaplar ve filmler"
+],
+"q": [
+"Bene Gesseritler, Fremenleri Arrakis'i cennete çevirecek bir peygamber kehanetine inandırmıştır. Bir Bene Gesserit olan Jessica, zor zamanlar için ekilen bu sahte inancı bilmektedir. Peki Paul gerçekten 'seçilmiş kişi' midir, yoksa halk zaten kehanete şartlandırıldığı için mi onu bu role oturtmaktadır? Buradan yola çıkarak insan kendi kaderini değiştirebilir mi yoksa ona atfedilen rollerin içinde mi yaşar?",
+"Kaynak kıtlığı olan bir dünyada güç kimde olur?"
+]
+},
+"Nolan & Barbie": {
+"e": "🎬",
+"t": [
+"Memento (2000)",
+"The Prestige (2006)",
+"The Dark Knight (2008)",
+"Inception (2010)",
+"The Dark Knight Rises (2012)",
+"Interstellar (2014)",
+"Dunkirk (2017)",
+"Tenet (2020)",
+"Oppenheimer (2023)",
+"Barbie (2023)"
+],
+"q": [
+"Nolan'ın en iyi filmi hangisi? Sadece biri.",
+"Inception'ın sonundaki topaç düştü mü?",
+"Barbie mi Oppenheimer mı? Barbenheimer'da kim kazandı?"
+],
+"o": [
+{
+"a": "Barbie (2023)",
+"b": "Oppenheimer (2023)",
+"q": "Barbie ve Oppenheimer aynı gün çıktı. Hangisini önce izlemeni önerirsin, neden?"
+}
+]
+},
+"Winx": {
+"e": "🧚",
+"t": [
+"Winx Club (Çizgi Dizi)",
+"Fate: The Winx Saga"
+],
+"q": [
+"Öncelikle ilk 4 sezonu ele alırsak en iyi düşman kimdi?",
+"Hangi Winx perisi olmak isterdin?"
+]
+},
+"Müzikaller": {
+"e": "🎭",
+"t": [
+"Hamilton (2020)",
+"Wicked (2024)"
+],
+"q": [
+"Hamilton Amerika'nın “Founding Father”larından birini her yönüyle ele alır. (Eşini aldattığı, işkolik olduğu, eşinin kız kardeşi ile olan tuhaf ilişkisi ile birlikte) Böyle bir müzikal veya film tabiri caizse bizim “founding father”larımızla yapılabilir mi veya neden yapılamaz? Türkler ve onların liderleri ile olan obsesyonları nedir?",
+"Türkiye'de müzikal sektörü neden gelişmemiştir?"
+]
+},
+"TR Pop": {
+"e": "🎤",
+"t": [
+"Manifest",
+"Crush"
+],
+"q": [
+"İkisinin de konserine bilet alma şansın olsa hangisine önce giderdin?",
+"Crush ve Manifest arasında hangisinin şarkıları daha iyi?"
+],
+"k": {
+"Manifest": [
+"Manifest'in senin için en anlamlı şarkısı hangisi ve neden?",
+"Küçükçiftlik parkta +18 konserlerinden sonra Manifest'e olanları hepimiz biliyoruz. O konserde fazla mı ileri gittiler? O süreçten beri Manifest daha mı iyi, daha mı kötü?"
+],
+"Crush": [
+"Bias'ını kalbinle savun (en sevdiğin üye)",
+"Crush'ı hiç dinlememiş birine ilk hangi şarkıyı açardın?"
+]
+}
+},
+"Anime & Manga": {
+"e": "🎌",
+"t": [
+"Death Note",
+"Attack on Titan",
+"Jujutsu Kaisen",
+"Studio Ghibli",
+"Demon Slayer"
+],
+"q": [],
+"k": {
+"Death Note": [
+"Light Yagami gerçekten kötü biri miydi, yoksa amacı yöntemlerini haklı çıkarabilir mi?",
+"Death Note senin eline geçse kullanır mıydın? İlk kimin adını yazardın?",
+"Light mı L mi? Hangisinin tarafında olurdun? Neden?"
+],
+"Attack on Titan": [
+"Eren Yeager haklı mıydı, haksız mıydı? Neden?"
+],
+"Studio Ghibli": [
+"Hayatının geri kalanını bir Ghibli evreninde geçirecek olsan hangi filmi seçerdin?"
+],
+"Demon Slayer": [
+"En sevdiğin Hashira kim? Neden?"
+]
+},
+"o": [
+{
+"a": "Attack on Titan",
+"b": "Death Note",
+"q": "Duvarların içinde güvenli ama yalan bir hayat mı, dışında tehlikeli ama özgür bir hayat mı?"
+},
+{
+"a": "Attack on Titan",
+"b": "Death Note",
+"q": "Eren mi Light mı? Hangisinin yaptıkları daha savunulabilir?"
+}
+]
+},
+"Gaming": {
+"e": "🎮",
+"t": [
+"The Sims",
+"GTA",
+"The Last of Us",
+"Resident Evil",
+"League of Legends",
+"Life is Strange"
+],
+"q": [],
+"k": {
+"The Sims": [
+"Bir hafta boyunca gerçek hayatını The Sims gibi yönetebilseydin ilk neyi değiştirirdin?",
+"The Sims'te yaptığın en acımasız şey neydi ve bunu neden yaptın?"
+],
+"GTA": [
+"GTA evreninde 24 saat geçirecek olsan hangi şehirde yaşamak isterdin?",
+"GTA V'in üç ana karakterinden hangisiyle bir gün geçirmek isterdin: Michael, Franklin, Trevor?"
+],
+"The Last of Us": [
+"Joel'un 1. oyun finalinde Ellie hakkında verdiği kararı doğru mu?",
+"Spoiler Alert: Joel'ün Part 2 başındaki ölümü saçmaydı. Dizi açısından ve oyun açısından tartışın",
+"Ellie'yi kaçıran David zorlu kış şartlarında halkını tok tutmak için gizlice insanlara insan eti yedirir. David'in bu kararı doğru mu? Bir lider danışmadan böyle bir karar verebilir mi? Mecbur kalsanız insan eti yer misiniz? Hangi noktada etik biter ve hayatta kalma başlar?"
+],
+"Resident Evil": [
+"Raccoon City'de mahsur kalsan saklanmaya mı çalışırdın, yoksa şehirden kaçmak için risk mi alırdın?"
+],
+"League of Legends": [
+"Bir LoL şampiyonunun yeteneklerine gerçek hayatta sahip olabilsen kimi seçerdin, neden?"
+],
+"Life is Strange": [
+"Arcadia Bay'i mi kurtarırdın, Chloe'yi mi?"
+]
+},
+"o": [
+{
+"a": "The Last of Us",
+"b": "Resident Evil",
+"q": "Hangi evrende hayatta kalma şansın daha yüksek: The Last of Us mı Resident Evil mı?"
+}
+]
+},
+"Animasyon": {
+"e": "🎞️",
+"t": [
+"Arcane",
+"Avatar: The Last Airbender",
+"Rick and Morty"
+],
+"q": [],
+"k": {
+"Arcane": [
+"Jinx mi Vi mı? İki kardeşten hangisinin kararlarını daha çok haklı buluyorsun? Neden?",
+"Jayce mi Viktor mu? İnsanlığı kurtarmak konusunda hangisi haklıydı?",
+"Arcane'in en unutulmaz sahnesi hangisi? Neden?"
+],
+"Avatar: The Last Airbender": [
+"Aang mi Korra mı? Hangisi daha iyi Avatar, neden?",
+"Dört elementten birini bükebilseydin hangisini seçerdin, neden?"
+],
+"Rick and Morty": [
+"Bir günlüğüne Rick'in portal silahını kullanabilsen nereye giderdin? Neden?"
+]
+}
+},
+"Yabancı Dizi": {
+"e": "📺",
+"t": [
+"Friends",
+"How I Met Your Mother",
+"The Vampire Diaries",
+"Stranger Things"
+],
+"q": [],
+"k": {
+"Friends": [
+"Friends'teki hangi karakterle aynı evde yaşamak isterdin?",
+"WE WERE ON A BREAK! Ross haklı mıydı?",
+"Friends'in en ikonik sahnesi hangisi? Tek birini seç ve neden?"
+],
+"How I Met Your Mother": [
+"Dizinin finalini değiştirebilseydin nasıl bitirirdin?",
+"Dizideki hangi karakterin hayatını bir haftalığına yaşamak isterdin?"
+],
+"The Vampire Diaries": [
+"Team Stefan mı Team Damon mı? Neden?",
+"TVD'nin en büyük haksızlığa uğrayan karakteri kimdi?"
+],
+"Stranger Things": [
+"Stranger Things'in en iyi sezonu hangisi? Tek birini savun.",
+"Hawkins arkadaş grubundan hangisiyle en iyi anlaşırdın, neden?"
+]
+}
+},
+"Medya": {
+"e": "📱",
+"t": [
+"Medya"
+],
+"q": [
+"Christopher Nolan ve filmleri kendini sinefil sanan insanlar tarafından abartılıyor",
+"GenZ sosyal medya kullanımı sayesinde kendine daha önem veren, farkındalığı yüksek bir jenerasyon mu yoksa gördüğü her şeyi kopyalayan çocuklar mı?",
+"2010'dan sonra doğan jenerasyon hakkında endişeli misin? Güzellik standartları, fazla sosyal medya kullanımı yüzünden hobileri olmaması gibi endişelerini tartış",
+"Bir kafe bulmak için ilk önce nereyi açıyorsun? TikTok yeni Google mı",
+"Hayranı olduğun bir ünlü seninle aynı etik, politik siyasi görüşe sahip olması ne kadar önemli? Sınırı nerede çiziyorsun?"
+]
+}
+};
 const TOP={};Object.entries(U).forEach(([u,o])=>o.t.forEach(t=>TOP[t]=u));
 const ALL=Object.keys(TOP),UE=Object.keys(U);
 const FREEQ=["Son zamanlarda izlediğin ya da okuduğun en iyi şey neydi? Gruba bir tavsiye ver.","Bir hikâyenin içinde yaşayabilseydin hangisini seçerdin?"];
@@ -666,9 +1019,17 @@ const sh=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|
 const interest=(p,u)=>p.likes.filter(t=>TOP[t]===u).length;
 const split=(n,k)=>Array.from({length:k},(_,i)=>Math.floor(n/k)+(i<n%k?1:0));
 const sizesFor=(n,c)=>c.sizes.reduce((a,b)=>a+b,0)===n?[...c.sizes]:split(n,Math.max(1,Math.min(c.k,n)));
-function pickQs(g){if(!g.u)return FREEQ;const o=U[g.u];if(!o.sub)return o.q;const a=o.t.filter(t=>g.m.some(p=>p.likes.includes(t)));return a.length>1?o.q:(o.sub[a[0]]||o.q)}
-const glr=g=>g.u?g.u+(U[g.u].sub?" ("+U[g.u].t.filter(t=>g.m.some(p=>p.likes.includes(t))).join(" + ")+")":""):"Serbest sohbet";
-
+const cnt=(m,c)=>m.filter(p=>p.likes.includes(c)).length;
+function buildQs(g){
+  if(!g.u)return{qs:FREEQ,qx:[]};
+  const o=U[g.u],ok=[],kk=[],ex=[];
+  (o.o||[]).forEach(x=>{(cnt(g.m,x.a)>=2&&cnt(g.m,x.b)>=2?ok:ex).push(x.q)});
+  Object.entries(o.k||{}).forEach(([c,qs])=>{(cnt(g.m,c)>=2?kk:ex).push(...qs)});
+  return{qs:[...sh(ok),...sh(kk),...sh(o.q||[])],qx:sh(ex)};
+}
+const glr=g=>{if(!g.u)return"Serbest sohbet";const o=U[g.u];if(!o.k&&!o.o)return g.u;const cs=o.t.filter(t=>cnt(g.m,t)>=2).sort((a,b)=>cnt(g.m,b)-cnt(g.m,a)).slice(0,2);return g.u+(cs.length?" ("+cs.join(" + ")+")":"")};
+const noGen=u=>!!u&&!(U[u].q&&U[u].q.length);
+const nElig=(m,u)=>{const o=U[u];let n=0;Object.keys(o.k||{}).forEach(c=>{if(cnt(m,c)>=2)n++});(o.o||[]).forEach(x=>{if(cnt(m,x.a)>=2&&cnt(m,x.b)>=2)n++});return n};
 function buildRound(d,list,min){
   const A=list.filter(p=>p.name).map(p=>({id:p.id,name:p.name,emoji:p.emoji||"kafeinBagimlisi",bio:p.bio||"",likes:p.likes||[],had:new Set()}));
   if(A.length<(min||2))return null;
@@ -679,7 +1040,7 @@ function buildRound(d,list,min){
   const dem=u=>A.filter(p=>interest(p,u)>0&&!p.had.has(u)).length;
   const tp=sh(UE).sort((a,b)=>dem(b)-dem(a)).slice(0,sz.length).map(u=>dem(u)>0?u:null);
   const tc=(p,u)=>{if(!u)return 6;const it=interest(p,u);return(it>0?-10-Math.min(it,3):8)+(p.had.has(u)?30:0)};
-  const gc=(m,u)=>{let c=0;for(let i=0;i<m.length;i++){c+=tc(m[i],u);for(let j=i+1;j<m.length;j++)c+=12*(MET[key(m[i].id,m[j].id)]||0)}return c};
+  const gc=(m,u)=>{let c=0;for(let i=0;i<m.length;i++){c+=tc(m[i],u);for(let j=i+1;j<m.length;j++)c+=12*(MET[key(m[i].id,m[j].id)]||0)}if(noGen(u)){const n=nElig(m,u);c+=n===0?15:-4*Math.min(n,3)}return c};
   let best=null,bs=1e9;
   for(let r=0;r<6;r++){
     const o=sh(A);let s=0;const g=sz.map(n=>{const m=o.slice(s,s+n);s+=n;return m});
@@ -691,7 +1052,7 @@ function buildRound(d,list,min){
     }
     const t=g.reduce((x,m,i)=>x+gc(m,tp[i]),0);if(t<bs){bs=t;best=g}
   }
-  const groups=best.map((m,i)=>{const g={u:tp[i]||null,m};return{u:g.u,label:glr(g),m:m.map(p=>({id:p.id,name:p.name,emoji:p.emoji,bio:p.bio})),qs:pickQs(g),qk:Math.random()*10|0,liked:g.u?m.filter(p=>interest(p,g.u)>0).length:0}});
+  const groups=best.map((m,i)=>{const g={u:tp[i]||null,m},Q=buildQs(g);return{u:g.u,label:glr(g),m:m.map(p=>({id:p.id,name:p.name,emoji:p.emoji,bio:p.bio})),qs:Q.qs,qx:Q.qx,qk:g.u?(Q.qs.length?0:-1):(Math.random()*10|0),liked:g.u?m.filter(p=>interest(p,g.u)>0).length:0}});
   best.forEach(m=>add(m.map(p=>p.id)));
   const c=A.map(p=>A.filter(q=>q!==p&&MET[key(p.id,q.id)]).length/Math.max(1,A.length-1));
   return{groups,hist:[...(d.hist||[]),{g:best.map((m,i)=>({u:tp[i]||null,ids:m.map(p=>p.id)}))}],cov:{avg:c.reduce((a,b)=>a+b,0)/c.length,min:Math.min(...c)}}
@@ -716,7 +1077,7 @@ const INFO=`<div class="chip" style="flex-direction:column;align-items:stretch;g
 const S={role:null,name:"",emoji:"kafeinBagimlisi",bio:"",likes:[],i:0,order:[],runId:0,helpAt:0,err:"",email:""};
 let ST=null,PL=[],HELP=[],off=0,uid=null,unsubs=[],busy=false,booting=true,fatal="",lastSig="",LASTERR="";
 let PLOK=false;
-const VER="v15 · Oyuncu listesi + çıkış ✨";
+const VER="v16 · Yeni sorular ✨";
 const srv=()=>Date.now()+off;
 const thr=()=>(!ST||["setup","lobby","swipe"].includes(ST.phase))?300000:1200000;
 const seenMs=p=>p.seen&&p.seen.toMillis?p.seen.toMillis():0;
@@ -730,7 +1091,7 @@ function shS(arr,r){const a=[...arr];for(let i=a.length-1;i>0;i--){const j=r()*(
 async function syncClock(){try{const r=doc(db,"pings",uid),t0=Date.now();await setDoc(r,{t:serverTimestamp()});const s=await getDocFromServer(r);off=s.data().t.toMillis()-(t0+Date.now())/2}catch(e){}}
 const fail=e=>{fatal="Bağlantı hatası: "+(e&&e.message||e)+" (Güvenlik kuralları yayınlandı mı?)";render()};
 const myGroup=()=>ST&&ST.groups?ST.groups.findIndex(g=>g.m.some(p=>p.id===uid)):-1;
-const qOf=g=>g.qs[(g.qk||0)%g.qs.length];
+const qOf=g=>{const all=[...(g.qs||[]),...(g.qx||[])];const k=g.qk==null?0:g.qk;return(k<0||!all.length)?null:all[k%all.length]};
 const pw=o=>setDoc(doc(db,"players",uid),{name:S.name,emoji:S.emoji,bio:S.bio,likes:S.likes,i:S.i,done:S.order.length>0&&S.i>=S.order.length,rid:S.runId||0,seen:serverTimestamp(),...o}).catch(fail);
 
 onAuthStateChanged(auth,async u=>{
@@ -768,7 +1129,7 @@ const H={
   open(cfg,demo){return setDoc(SREF,{phase:"lobby",cfg,demo,round:0,groups:[],hist:[],paused:false,endAt:0,rem:0,runId:Date.now(),cov:null}).catch(fail)},
   start(){upd({phase:"swipe",round:0,groups:[],hist:[],cov:null,runId:Date.now(),paused:false,endAt:srv()+dur("swipe")})},
   ask(){upd({phase:"talk",paused:false,endAt:srv()+dur("talk")})},
-  chg(i){const g=[...ST.groups];g[i]={...g[i],qk:(g[i].qk||0)+1};upd({groups:g})},
+  chg(i){const g=[...ST.groups];g[i]={...g[i],qk:(g[i].qk==null?0:g[i].qk)+1};upd({groups:g})},
   pause(){ST.paused?upd({paused:false,endAt:srv()+(ST.rem||0)}):upd({paused:true,rem:left()})},
   skip(){upd({paused:false,endAt:srv()})},
   cancel(){upd({phase:"lobby",round:0,groups:[],hist:[],paused:false,cov:null,runId:Date.now()})},
@@ -884,7 +1245,7 @@ function roles(){
     </div>
     <h1>Tanışma Kahvemiz</h1>
     <span class="mystery-badge">Meet &amp; Cute</span>
-    <p class="mut" style="margin-top:4px;color:var(--lemon-icing);text-shadow:0 2px 4px rgba(0,0,0,0.5)">15 Ekim Perşembe · 19.00 · The Stock Bahçeli<br>TOBB ETÜ Popüler Kültür Topluluğu</p>
+    <p class="mut" style="margin-top:4px;color:var(--lemon-icing);text-shadow:0 2px 4px rgba(0,0,0,0.5)">18 Ekim Pazar · 19.00 · The Stock Bahçeli<br>TOBB ETÜ Popüler Kültür Topluluğu</p>
   </div>
   ${INFO}
   <p class="mut" style="text-align:center;margin-top:6px;color:var(--lemon-icing);text-shadow:0 2px 4px rgba(0,0,0,0.5)">Kim olarak katılıyorsun?</p>
@@ -967,7 +1328,7 @@ function host(){
         <span style="width:18px;height:18px;display:inline-flex;border-radius:4px;overflow:hidden">${getAvatarSvg(p.emoji)}</span> ${esc(p.name)}
       </span>`).join("")}
     </div>
-    <div style="background:var(--lemon-icing);color:var(--beet-red);border:2px solid var(--beet-red);padding:10px 14px;border-radius:14px;font-size:14px;font-weight:800">💬 ${esc(qOf(g))}</div>
+    <div style="background:var(--lemon-icing);color:var(--beet-red);border:2px solid var(--beet-red);padding:10px 14px;border-radius:14px;font-size:14px;font-weight:800">${qOf(g)?"💬 "+esc(qOf(g)):"⚠️ Bu masada ortak soru çıkmadı. Masayla ilgilen ya da Başka Soru Aç'a bas."}</div>
     <button class="g sm" data-q="${i}">🔄 Başka Soru Aç</button>
   </div>`).join(""):""}
   ${plist}
@@ -1022,7 +1383,7 @@ function player(){
           <span class="pill">Masa ${k+1} · ${esc(g.label)}</span>
           <div class="timer" id="t">${mmss(left())}</div>
         </div>
-        <div class="q">💬 ${esc(qOf(g))}</div>
+        ${qOf(g)?`<div class="q">💬 ${esc(qOf(g))}</div>`:`<div class="q">Bu masada ortak bir soru çıkmadı. Host sana yardımcı olacak 🙌</div>`}
         <div class="chip" style="margin-top:4px;background:var(--crystal-blue);border-color:var(--beet-red);color:var(--beet-red)">
           <span style="font-size:22px">💡</span>
           <span class="mut" style="color:var(--beet-red);font-weight:800">Herkesin söz almasına özen gösterin, süreniz dolunca yeni masalara geçeceksiniz!</span>
